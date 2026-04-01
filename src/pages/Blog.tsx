@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight, BookOpen, Sparkles } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import FloatingIcons from "@/components/FloatingIcons";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
-// Placeholder blog posts — will be replaced with dynamic CMS from Lovable Cloud
 const placeholderPosts = [
   {
     slug: "mens-vitality-tips",
@@ -19,7 +19,6 @@ const placeholderPosts = [
     excerpt: "Discover evidence-based strategies for improving energy, focus, and overall vitality without relying on medication alone.",
     category: "Men's Health",
     date: "2026-03-28",
-    image: null,
   },
   {
     slug: "sleep-improvement-guide",
@@ -27,7 +26,6 @@ const placeholderPosts = [
     excerpt: "Learn how sleep quality impacts every aspect of your health and actionable steps you can take tonight for better rest.",
     category: "Sleep & Wellness",
     date: "2026-03-25",
-    image: null,
   },
   {
     slug: "hormone-balance-basics",
@@ -35,7 +33,6 @@ const placeholderPosts = [
     excerpt: "Hormones affect everything from mood to metabolism. Here's what you should understand about maintaining healthy hormone levels.",
     category: "Hormone Support",
     date: "2026-03-20",
-    image: null,
   },
   {
     slug: "infection-awareness",
@@ -43,11 +40,19 @@ const placeholderPosts = [
     excerpt: "Knowing when to seek professional guidance for infections can make all the difference in treatment outcomes.",
     category: "Infections & Antibiotics",
     date: "2026-03-15",
-    image: null,
   },
 ];
 
 const categories = ["All", "Men's Health", "Hormone Support", "Sleep & Wellness", "Infections & Antibiotics", "Heart & Blood", "Diabetes"];
+
+const categoryColors: Record<string, string> = {
+  "Men's Health": "bg-primary/10 text-primary",
+  "Hormone Support": "bg-secondary/10 text-secondary",
+  "Sleep & Wellness": "bg-accent/10 text-accent",
+  "Infections & Antibiotics": "bg-primary/10 text-primary",
+  "Heart & Blood": "bg-secondary/10 text-secondary",
+  "Diabetes": "bg-accent/10 text-accent",
+};
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -58,36 +63,45 @@ const Blog = () => {
 
   return (
     <Layout>
-      <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container max-w-5xl">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} className="text-center space-y-4 mb-10">
-            <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">Health & Wellness Blog</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="relative py-24 bg-gradient-to-b from-primary/8 to-background overflow-hidden">
+        <FloatingIcons count={6} />
+        <div className="absolute bottom-20 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+
+        <div className="container max-w-5xl relative z-10">
+          <motion.div initial="hidden" animate="visible" className="text-center space-y-4 mb-12">
+            <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <BookOpen size={16} /> Health Insights
+            </motion.div>
+            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
+              Health & Wellness{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Blog</span>
+            </motion.h1>
+            <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Expert insights, tips, and guidance for your health journey.
-            </p>
+            </motion.p>
           </motion.div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-2 mb-12">
             {categories.map((cat) => (
               <Button
                 key={cat}
                 variant={activeCategory === cat ? "default" : "outline"}
                 size="sm"
                 onClick={() => setActiveCategory(cat)}
+                className={activeCategory === cat ? "shadow-md shadow-primary/20" : "border-border/60"}
               >
                 {cat}
               </Button>
             ))}
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {filtered.map((post, i) => (
-              <motion.div key={post.slug} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ delay: i * 0.1 }}>
+              <motion.div key={post.slug} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <Link to={`/blog/${post.slug}`}>
-                  <Card className="group hover:shadow-md hover:border-primary/30 transition-all h-full">
+                  <Card className="group hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 h-full">
                     <CardContent className="p-6 space-y-3">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[post.category] || "bg-muted text-muted-foreground"}`}>
                         {post.category}
                       </span>
                       <h2 className="text-xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
@@ -98,7 +112,7 @@ const Blog = () => {
                         <span className="flex items-center gap-1 text-xs text-muted-foreground">
                           <Calendar size={14} /> {new Date(post.date).toLocaleDateString()}
                         </span>
-                        <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                        <ArrowRight size={16} className="text-muted-foreground/40 group-hover:text-primary group-hover:translate-x-1 transition-all" />
                       </div>
                     </CardContent>
                   </Card>
