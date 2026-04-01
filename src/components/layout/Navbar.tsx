@@ -21,7 +21,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="MatrixMedSupport" className="h-10 w-auto max-w-[200px] object-contain" />
+          <img src="/logo.svg" alt="MatrixMedSupport" className="h-10 w-auto max-w-[200px] object-contain" />
         </Link>
 
         {/* Desktop Nav */}
