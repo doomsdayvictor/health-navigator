@@ -86,7 +86,7 @@ const Index = () => (
             custom={2}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Access trusted solutions for your health needs — from consultation to ongoing care.
+            Access trusted solutions for your health needs from consultation to ongoing care.
           </motion.p>
           <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="text-base px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
