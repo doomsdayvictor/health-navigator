@@ -30,7 +30,7 @@ const fadeUp = {
 };
 
 const steps = [
-  { icon: ClipboardList, title: "Submit Your Request", description: "Fill out our secure consultation form with your health concerns, goals, and any relevant medical history. All information is kept strictly confidential.", color: "from-primary to-accent" },
+  { icon: ClipboardList, title: "Start the Conversation", description: "Give us a call and share your wellness questions, goals, and what you'd like to learn. All conversations are kept strictly confidential.", color: "from-primary to-accent" },
   { icon: UserCheck, title: "Get Reviewed by Specialists", description: "Our team of healthcare support specialists reviews your submission and prepares personalized recommendations based on your unique profile.", color: "from-secondary to-secondary/70" },
   { icon: HeartPulse, title: "Receive Expert Guidance", description: "You'll receive tailored guidance including treatment support options, lifestyle recommendations, and next steps for your health journey.", color: "from-accent to-primary" },
   { icon: RefreshCw, title: "Ongoing Support", description: "Your care doesn't end with a single consultation. We provide follow-ups, progress tracking, and plan adjustments as your needs evolve.", color: "from-primary to-secondary" },
@@ -62,12 +62,7 @@ const HowItWorks = () => (
             Our streamlined process makes accessing quality health support simple and stress-free.
           </motion.p>
           <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-3 pt-4">
-            <CallButton size="lg" label="Call Now" showNumber />
-            <Button asChild size="lg" variant="outline">
-              <Link to="/consultation">
-                Start a Wellness Conversation <ArrowRight className="ml-2" size={18} />
-              </Link>
-            </Button>
+            <CallButton size="lg" showNumber />
           </motion.div>
         </motion.div>
 
@@ -280,11 +275,6 @@ const HowItWorks = () => (
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               <CallButton size="lg" variant="secondary" showNumber />
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/consultation">
-                  Start a Wellness Conversation <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
             </div>
             <p className="mt-8 text-xs text-primary-foreground/70 max-w-2xl mx-auto">
               Educational information only. We are not a pharmacy or prescriber and do not provide medical diagnosis or treatment. Always consult a qualified healthcare professional.
