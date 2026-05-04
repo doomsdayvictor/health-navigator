@@ -122,7 +122,7 @@ const Index = () => (
             Talk to a friendly wellness specialist for personalized, educational guidance. No pressure, just clarity.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-4">
-            <CallButton size="lg" className="text-base px-8" showNumber />
+            <CallButton size="lg" className="text-base px-8" label="Call Now" />
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
               <Link to="/services">How We Help</Link>
             </Button>
