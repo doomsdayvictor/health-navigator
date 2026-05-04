@@ -60,8 +60,8 @@ const CallPopup = () => {
             Talk to a wellness specialist — free.
           </h2>
           <p className="mt-2 text-primary-foreground/85 text-sm">
-            A friendly, no-obligation conversation. Educational guidance only —
-            no pressure, no sales.
+            A friendly, no obligation conversation. Educational guidance only.
+            No pressure, no sales.
           </p>
 
           <div className="mt-5 grid grid-cols-3 gap-2 text-[11px] text-primary-foreground/85">
@@ -69,7 +69,7 @@ const CallPopup = () => {
               <ShieldCheck size={16} /> 100% Private
             </div>
             <div className="flex flex-col items-center gap-1">
-              <Clock size={16} /> 10–20 min
+              <Clock size={16} /> 10 to 20 min
             </div>
             <div className="flex flex-col items-center gap-1">
               <HeartHandshake size={16} /> No obligation
