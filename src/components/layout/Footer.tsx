@@ -48,6 +48,7 @@ const Footer = () => (
               { label: "Privacy Policy", to: "/privacy" },
               { label: "Terms of Service", to: "/terms" },
               { label: "Disclaimer", to: "/disclaimer" },
+              { label: "Advertising Disclosure", to: "/advertising-disclosure" },
             ].map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="hover:text-primary-foreground transition-colors inline-flex items-center gap-1 group">
