@@ -318,11 +318,6 @@ const Treatments = () => (
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-2">
               <CallButton size="lg" variant="secondary" showNumber />
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white/40 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
-                <Link to="/consultation">
-                  Request a Callback <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
             </div>
             <p className="text-xs text-primary-foreground/70 pt-2">
               Educational only. We are not a pharmacy and do not prescribe or sell medication.
