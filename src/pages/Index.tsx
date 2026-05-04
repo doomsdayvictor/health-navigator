@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
+import CallButton from "@/components/CallButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -94,6 +95,7 @@ const Index = () => (
                 Book a Free Conversation <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
+            <CallButton size="lg" className="text-base px-8" showNumber />
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
               <Link to="/services">How We Help</Link>
             </Button>
