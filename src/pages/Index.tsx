@@ -244,11 +244,14 @@ const Index = () => (
           ))}
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
-          <Button asChild size="lg" variant="secondary" className="text-base px-10 shadow-xl hover:shadow-2xl transition-all">
-            <Link to="/consultation">
-              Book a Free Conversation <ArrowRight className="ml-2" size={18} />
-            </Link>
-          </Button>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild size="lg" variant="secondary" className="text-base px-10 shadow-xl hover:shadow-2xl transition-all">
+              <Link to="/consultation">
+                Book a Free Conversation <ArrowRight className="ml-2" size={18} />
+              </Link>
+            </Button>
+            <CallButton size="lg" className="text-base px-8" showNumber />
+          </div>
         </motion.div>
       </div>
     </section>

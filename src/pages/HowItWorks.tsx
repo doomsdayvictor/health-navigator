@@ -5,6 +5,7 @@ import { ClipboardList, UserCheck, HeartPulse, RefreshCw, ArrowRight, Sparkles }
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import CallButton from "@/components/CallButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -68,12 +69,13 @@ const HowItWorks = () => (
           ))}
         </div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mt-14">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mt-14 flex flex-wrap justify-center gap-3">
           <Button asChild size="lg" className="shadow-lg shadow-primary/20">
             <Link to="/consultation">
-              Start Your Journey <ArrowRight className="ml-2" size={18} />
+              Begin Your Wellness Conversation <ArrowRight className="ml-2" size={18} />
             </Link>
           </Button>
+          <CallButton size="lg" showNumber />
         </motion.div>
       </div>
     </section>
