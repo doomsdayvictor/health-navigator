@@ -146,16 +146,16 @@ const Index = () => (
           </motion.div>
           <motion.div variants={fadeUp} custom={1} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
             <Sparkles size={16} />
-            Personalized Wellness Guidance
+            A real conversation, not a sales pitch
           </motion.div>
           <motion.h1
             variants={fadeUp}
             custom={2}
             className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-foreground leading-tight"
           >
-            Better Wellness Decisions,{" "}
+            Wellness answers that actually{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              Made Simple.
+              make sense.
             </span>
           </motion.h1>
           <motion.p
@@ -163,12 +163,12 @@ const Index = () => (
             custom={3}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Talk to a friendly wellness specialist for personalized, educational guidance. No pressure, just clarity.
+            Hop on a free, private call with one of our wellness specialists. We'll talk things through in plain language so you can make decisions you feel good about.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-4">
-            <CallButton size="lg" className="text-base px-8" label="Call Now" />
+            <CallButton size="lg" className="text-base px-8" label="Talk to us" />
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
-              <Link to="/services">How We Help</Link>
+              <Link to="/services">See how we help</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -209,9 +209,9 @@ const Index = () => (
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Wellness Areas</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">Where We Can Help</h2>
-          <p className="mt-3 text-muted-foreground">Educational guidance across the wellness topics that matter most.</p>
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">What we cover</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">The stuff people actually call us about</h2>
+          <p className="mt-3 text-muted-foreground">A friendly conversation about whatever's on your mind, across the wellness topics that come up most.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
@@ -241,9 +241,9 @@ const Index = () => (
       <div className="absolute top-10 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl floating-element-slow" />
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Who We Are</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A Wellness Information Service Nothing More, Nothing Less</h2>
-          <p className="mt-3 text-muted-foreground">We exist to help you understand health better through conversation. We are not a clinic, pharmacy, or prescriber.</p>
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Who we are</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A wellness chat. Nothing more, nothing less.</h2>
+          <p className="mt-3 text-muted-foreground">We're here to help you understand your health better through honest conversation. We're not a clinic, a pharmacy, or a prescriber.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
@@ -252,11 +252,11 @@ const Index = () => (
                 <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
                   <CheckCircle size={22} />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">What we are</h3>
+                <h3 className="font-heading font-semibold text-lg text-foreground">What you'll get</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A free educational helpline</li>
-                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A friendly listening ear</li>
-                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A guide to better questions for your provider</li>
+                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A free call, no strings attached</li>
+                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> Someone who listens before they speak</li>
+                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> Sharper questions to bring to your doctor</li>
                 </ul>
               </CardContent>
             </Card>
@@ -267,11 +267,11 @@ const Index = () => (
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
                   <ShieldCheck size={22} />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">What we are not</h3>
+                <h3 className="font-heading font-semibold text-lg text-foreground">What we're not</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a pharmacy or medication seller</li>
-                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a diagnosis or prescribing service</li>
-                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a replacement for a licensed provider</li>
+                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a pharmacy and not selling medication</li>
+                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not diagnosing or writing prescriptions</li>
+                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a stand-in for your own doctor</li>
                 </ul>
               </CardContent>
             </Card>
@@ -286,9 +286,9 @@ const Index = () => (
       <div className="absolute -left-10 bottom-20 w-32 h-32 bg-primary/10 rounded-full blur-2xl floating-element" />
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Simple Process</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">How a Conversation Works</h2>
-          <p className="mt-3 text-muted-foreground">Three simple steps to clearer wellness decisions.</p>
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">How it works</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">Three steps. That's pretty much it.</h2>
+          <p className="mt-3 text-muted-foreground">No forms to wade through, no waiting rooms. Just a quick chat that leaves you with a clearer head.</p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
@@ -313,12 +313,12 @@ const Index = () => (
       <div className="container relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-            <BookOpen size={16} /> What You Can Learn
+            <BookOpen size={16} /> Stuff worth talking about
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-            Topics we cover on a <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">free call</span>
+            What we can <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">chat about</span>
           </h2>
-          <p className="text-muted-foreground">Bring any wellness question. We explain it simply, so you walk away more confident.</p>
+          <p className="text-muted-foreground">Bring whatever's been bugging you. We'll talk it through and you'll walk away feeling a little more in control.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {learningTopics.map((t, i) => (
@@ -342,9 +342,9 @@ const Index = () => (
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Why People Choose Us</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A Calmer Way to Care for Your Wellbeing</h2>
-          <p className="mt-3 text-muted-foreground">Honest, educational, people-first without the pressure.</p>
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Why people stick around</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A calmer way to look after yourself</h2>
+          <p className="mt-3 text-muted-foreground">Honest, friendly, people-first. No pushy scripts, ever.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feat, i) => (
@@ -369,9 +369,9 @@ const Index = () => (
       <div className="container relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
-            <ShieldCheck size={16} /> Our Principles
+            <ShieldCheck size={16} /> What we stand for
           </div>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">How we approach every conversation</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">How we show up on every call</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {principles.map((p, i) => (
@@ -397,9 +397,9 @@ const Index = () => (
       <div className="container relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
-            <Users size={16} /> Reflections from Callers
+            <Users size={16} /> What people say
           </div>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Real conversations, real clarity</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Real chats, in their own words</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
@@ -426,8 +426,8 @@ const Index = () => (
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
             <MessageCircle size={16} /> Frequently Asked Questions
           </div>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Answers to common questions</h2>
-          <p className="text-muted-foreground">Everything you need to know before your first wellness conversation.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Things people usually ask</h2>
+          <p className="text-muted-foreground">A quick rundown before you pick up the phone.</p>
         </div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <Accordion type="single" collapsible className="space-y-3">
@@ -459,16 +459,16 @@ const Index = () => (
 
       <div className="container relative z-10 text-center space-y-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">Ready for Clearer Wellness Answers?</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold">Ready for a calmer kind of conversation?</h2>
         </motion.div>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="text-lg text-primary-foreground/80 max-w-xl mx-auto">
-          Book a free, private wellness conversation. No pressure — just thoughtful, educational guidance.
+          Grab a free, private wellness call with one of our specialists. No pressure, no scripts \u2014 just a friendly chat.
         </motion.p>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="flex flex-wrap justify-center gap-3">
           {[
-            { icon: Shield, label: "100% Private" },
-            { icon: Lock, label: "Secure & Confidential" },
-            { icon: CheckCircle, label: "Free First Conversation" },
+            { icon: Shield, label: "Stays private" },
+            { icon: Lock, label: "Confidential by default" },
+            { icon: CheckCircle, label: "First call's on us" },
           ].map((badge) => (
             <div key={badge.label} className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur px-4 py-2 rounded-full text-sm">
               <badge.icon size={16} /> {badge.label}
@@ -477,7 +477,7 @@ const Index = () => (
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
           <div className="flex flex-wrap justify-center gap-3">
-            <CallButton size="lg" className="text-base px-8" label="Call Now" />
+            <CallButton size="lg" className="text-base px-8" label="Give us a call" />
           </div>
         </motion.div>
       </div>
