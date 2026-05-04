@@ -6,44 +6,26 @@ import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { blogPosts } from "@/data/blogPosts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
-const placeholderPosts = [
-  {
-    slug: "mens-vitality-tips",
-    title: "5 Natural Ways to Boost Men's Vitality",
-    excerpt: "Discover evidence-based strategies for improving energy, focus, and overall vitality without relying on medication alone.",
-    category: "Men's Health",
-    date: "2026-03-28",
-  },
-  {
-    slug: "sleep-improvement-guide",
-    title: "The Ultimate Guide to Better Sleep",
-    excerpt: "Learn how sleep quality impacts every aspect of your health and actionable steps you can take tonight for better rest.",
-    category: "Sleep & Wellness",
-    date: "2026-03-25",
-  },
-  {
-    slug: "hormone-balance-basics",
-    title: "Understanding Hormone Balance: What You Need to Know",
-    excerpt: "Hormones affect everything from mood to metabolism. Here's what you should understand about maintaining healthy hormone levels.",
-    category: "Hormone Support",
-    date: "2026-03-20",
-  },
-  {
-    slug: "infection-awareness",
-    title: "Common Infections: When to Seek Support",
-    excerpt: "Knowing when to seek professional guidance for infections can make all the difference in treatment outcomes.",
-    category: "Infections & Antibiotics",
-    date: "2026-03-15",
-  },
-];
+const placeholderPosts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
 
-const categories = ["All", "Men's Health", "Hormone Support", "Sleep & Wellness", "Infections & Antibiotics", "Heart & Blood", "Diabetes"];
+const categories = [
+  "All",
+  "Men's Health",
+  "Hormone Support",
+  "Sleep & Wellness",
+  "Infections & Antibiotics",
+  "Heart & Blood",
+  "Diabetes",
+  "Mind & Mood",
+  "Nutrition",
+];
 
 const categoryColors: Record<string, string> = {
   "Men's Health": "bg-primary/10 text-primary",
@@ -52,6 +34,8 @@ const categoryColors: Record<string, string> = {
   "Infections & Antibiotics": "bg-primary/10 text-primary",
   "Heart & Blood": "bg-secondary/10 text-secondary",
   "Diabetes": "bg-accent/10 text-accent",
+  "Mind & Mood": "bg-primary/10 text-primary",
+  "Nutrition": "bg-secondary/10 text-secondary",
 };
 
 const Blog = () => {
