@@ -59,7 +59,7 @@ const HowItWorks = () => (
             Our streamlined process makes accessing quality health support simple and stress-free.
           </motion.p>
           <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-3 pt-4">
-            <CallButton size="lg" showNumber />
+            <CallButton size="lg" label="Call Now" />
           </motion.div>
         </motion.div>
 
