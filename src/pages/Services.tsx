@@ -23,6 +23,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import CallButton from "@/components/CallButton";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -32,39 +33,39 @@ const fadeUp = {
 const services = [
   {
     icon: MessageSquare,
-    title: "Wellness Conversations",
+    title: "Free Wellness Chats",
     description:
-      "A free, judgement-free phone conversation where a specialist listens to your questions and helps you better understand your condition in plain, simple language.",
+      "A free, no-judgment phone call where a specialist actually listens, then helps you make sense of what you're going through in plain English.",
     features: [
-      "One-on-one verbal guidance",
-      "Plain-language explanations",
-      "Confidential and private",
+      "One-on-one and never rushed",
+      "Plain English, no jargon",
+      "Stays between you and us",
       "No paperwork, no pressure",
     ],
     gradient: "from-primary to-accent",
   },
   {
     icon: BookOpen,
-    title: "Health & Treatment Education",
+    title: "Health Topics, Made Clearer",
     description:
-      "Learn how different conditions work, what general treatment categories exist, and what questions to ask a qualified provider — all shared verbally over the phone.",
+      "Get a feel for how different conditions work, what kinds of approaches are out there, and the smart questions to take to a qualified provider \u2014 all over a relaxed phone call.",
     features: [
-      "Condition awareness",
-      "Treatment category overviews",
-      "Lifestyle and wellness tips",
-      "Questions to ask your doctor",
+      "Understanding conditions",
+      "Lay-of-the-land explanations",
+      "Everyday lifestyle tips",
+      "Smart questions for your doctor",
     ],
     gradient: "from-secondary to-secondary/70",
   },
   {
     icon: RefreshCw,
-    title: "Ongoing Wellness Guidance",
+    title: "We're Around When You Need Us",
     description:
-      "Health understanding isn't a one-time event. Reach back out any time for follow-up conversations as your questions or wellness goals evolve.",
+      "Health stuff doesn't get sorted in one go. Call us back any time as your questions change or new ones pop up.",
     features: [
       "Friendly follow-up calls",
-      "Updated educational resources",
-      "Wellness goal check-ins",
+      "Fresh resources when helpful",
+      "Casual goal check-ins",
       "Always free, always optional",
     ],
     gradient: "from-accent to-primary",
@@ -95,13 +96,18 @@ const principles = [
 ];
 
 const testimonials = [
-  { name: "Michael Carter", text: "I finally understood what my diagnosis actually meant — and what to ask my doctor next." },
-  { name: "Jessica Bennett", text: "The call was relaxed and informative. No pressure, just useful answers in plain words." },
-  { name: "David Thompson", text: "It helped me feel less alone with my questions. A genuinely supportive conversation." },
+  { name: "Michael Carter", text: "Honestly, I left the call understanding my diagnosis for the first time. They didn't try to sell me a thing." },
+  { name: "Jessica Bennett", text: "It felt more like a chat with a friend than a call with a service. I asked dumb questions and never felt judged." },
+  { name: "David Thompson", text: "I'd been bottling up questions for months. Fifteen minutes later I finally felt like I had answers I could use." },
 ];
 
 const Services = () => (
   <Layout>
+    <SEO
+      title="Our Services \u2014 Free Wellness Conversations | MetrixConvo"
+      description="See how a free MetrixConvo wellness call works. Friendly specialists, plain English, zero pressure. Built to help you understand your health better."
+      path="/services"
+    />
     {/* Hero */}
     <section className="relative py-24 bg-gradient-to-b from-primary/10 via-secondary/5 to-background overflow-hidden">
       <FloatingIcons count={6} />
@@ -119,13 +125,13 @@ const Services = () => (
             </div>
           </motion.div>
           <motion.div variants={fadeUp} custom={1} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
-            <Sparkles size={16} /> Free Wellness Conversations
+            <Sparkles size={16} /> Free, friendly, no strings
           </motion.div>
           <motion.h1 variants={fadeUp} custom={2} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
-            How We <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Help You</span>
+            How we actually <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">help</span>
           </motion.h1>
           <motion.p variants={fadeUp} custom={3} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're a health information service — not a pharmacy or clinic. Everything we offer happens through a free, friendly phone conversation designed to help you understand your health better.
+            We're a wellness information service, not a pharmacy or a clinic. Everything we do happens over a relaxed phone call, designed to leave you with a clearer picture of your own health.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-3 pt-2">
             <CallButton size="lg" showNumber />
