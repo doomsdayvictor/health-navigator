@@ -305,7 +305,7 @@ const Index = () => (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-medium text-secondary uppercase tracking-wider">Why People Choose Us</span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A Calmer Way to Care for Your Wellbeing</h2>
-          <p className="mt-3 text-muted-foreground">Honest, educational, people-first — without the pressure.</p>
+          <p className="mt-3 text-muted-foreground">Honest, educational, people-first without the pressure.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feat, i) => (
