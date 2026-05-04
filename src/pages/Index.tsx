@@ -119,7 +119,7 @@ const Index = () => (
             custom={3}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Talk to a friendly wellness specialist for personalized, educational guidance — no pressure, just clarity.
+            Talk to a friendly wellness specialist for personalized, educational guidance. No pressure, just clarity.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="text-base px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
