@@ -13,6 +13,7 @@ import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
 import CallButton from "@/components/CallButton";
 import CallPopup from "@/components/CallPopup";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,18 +26,18 @@ const staggerContainer = {
 };
 
 const categories = [
-  { icon: Stethoscope, title: "Men's Wellness", description: "Everyday energy, focus, and confidence — explained simply.", slug: "mens-health", color: "bg-primary/10 text-primary" },
-  { icon: Activity, title: "Hormonal Balance Education", description: "Understand how hormonal health shapes how you feel.", slug: "hormone-support", color: "bg-secondary/10 text-secondary" },
-  { icon: Shield, title: "Immune & Recovery Wellness", description: "Habits that support your body's natural resilience.", slug: "immune-recovery", color: "bg-accent/10 text-accent" },
-  { icon: Moon, title: "Sleep & Mind Wellness", description: "Better rest, focus, and mental clarity.", slug: "sleep-wellness", color: "bg-primary/10 text-primary" },
-  { icon: Heart, title: "Heart & Circulation Wellness", description: "Lifestyle education for everyday heart wellbeing.", slug: "heart-blood", color: "bg-secondary/10 text-secondary" },
-  { icon: Droplets, title: "Metabolic Wellness", description: "Education on metabolism, energy, and balance.", slug: "metabolic", color: "bg-accent/10 text-accent" },
+  { icon: Stethoscope, title: "Men's Wellness", description: "Everyday energy, focus and confidence, talked through in plain language.", slug: "mens-health", color: "bg-primary/10 text-primary" },
+  { icon: Activity, title: "Hormonal Balance", description: "Get a feel for how your hormones shape your mood, sleep and energy.", slug: "hormone-support", color: "bg-secondary/10 text-secondary" },
+  { icon: Shield, title: "Immune & Recovery", description: "Small daily habits that help your body bounce back stronger.", slug: "immune-recovery", color: "bg-accent/10 text-accent" },
+  { icon: Moon, title: "Sleep & Mind", description: "Wind down better, sleep deeper, and wake up with a clearer head.", slug: "sleep-wellness", color: "bg-primary/10 text-primary" },
+  { icon: Heart, title: "Heart & Circulation", description: "Simple lifestyle ideas for looking after your heart day to day.", slug: "heart-blood", color: "bg-secondary/10 text-secondary" },
+  { icon: Droplets, title: "Metabolic Wellness", description: "Make sense of metabolism, energy dips and how it all fits together.", slug: "metabolic", color: "bg-accent/10 text-accent" },
 ];
 
 const steps = [
-  { num: "01", title: "Tell Us About You", description: "Share a few details about your wellness goals through our private form — no commitment required.", icon: ClipboardIcon },
-  { num: "02", title: "Talk With a Specialist", description: "A wellness specialist reviews your goals and prepares personalized educational guidance.", icon: Users },
-  { num: "03", title: "Stay Supported", description: "Receive ongoing wellness check-ins and clear next steps to discuss with a licensed provider.", icon: Heart },
+  { num: "01", title: "Tell us a bit about you", description: "Drop us a few quick details about what you'd like to work on. Nothing fancy, no commitment.", icon: ClipboardIcon },
+  { num: "02", title: "Chat with a specialist", description: "One of our wellness specialists hops on a call and walks you through your options in plain English.", icon: Users },
+  { num: "03", title: "Keep things moving", description: "We follow up when it helps and leave you with clear next steps to bring to a licensed provider.", icon: Heart },
 ];
 
 function ClipboardIcon(props: any) {
@@ -44,70 +45,83 @@ function ClipboardIcon(props: any) {
 }
 
 const features = [
-  { icon: Shield, title: "Private & Confidential", description: "Your information is protected and never shared without your permission." },
-  { icon: Users, title: "People-First Specialists", description: "Friendly wellness specialists who actually listen to your goals." },
-  { icon: Zap, title: "Simple & Stress-Free", description: "A short conversation that respects your time — no jargon, no pressure." },
-  { icon: Brain, title: "Educational, Always", description: "Clear, honest information so you can make confident wellness decisions." },
+  { icon: Shield, title: "Stays between us", description: "What you share with us stays with us. We never pass your details on without asking first." },
+  { icon: Users, title: "Real people, real listening", description: "Our specialists are friendly humans who actually hear you out before saying a word." },
+  { icon: Zap, title: "Quick and easy", description: "A short, relaxed call that respects your time. No jargon, no pressure, no upsell." },
+  { icon: Brain, title: "Always educational", description: "Honest, useful info so you can make wellness choices you actually feel good about." },
 ];
 
 const faqs = [
   {
     q: "What exactly is MetrixConvo?",
-    a: "MetrixConvo is a wellness and health information platform. We offer free, private conversations with wellness specialists who provide educational guidance. We are not a pharmacy and do not prescribe or sell medication.",
+    a: "We're a wellness and health information service. You hop on a free, private call with one of our specialists and we help you understand your options in plain language. We're not a pharmacy, and we don't prescribe or sell medication.",
   },
   {
     q: "Is the first conversation really free?",
-    a: "Yes. Your first wellness conversation is completely free, with no obligation. It's simply a chance to talk through your wellness goals and explore your options.",
+    a: "Yep, completely free, with zero obligation. It's just a chance to talk through what's on your mind and see if our guidance is useful to you.",
   },
   {
     q: "Will my information stay private?",
-    a: "Absolutely. Your details are kept confidential and are never shared without your permission. We follow strict privacy practices outlined in our Privacy Policy.",
+    a: "Always. Anything you tell us stays confidential and never goes anywhere without your say-so. The full details are in our Privacy Policy.",
   },
   {
     q: "Do you provide medical advice or prescriptions?",
-    a: "No. MetrixConvo provides educational wellness information only. For diagnosis, prescriptions, or medical treatment, we encourage you to speak with a qualified, licensed healthcare provider.",
+    a: "No, and we're upfront about that. We share educational wellness information only. For anything diagnosis, prescription or treatment-related, please speak with a qualified, licensed healthcare provider.",
   },
   {
     q: "How long does a wellness conversation take?",
-    a: "Most conversations last around 10–15 minutes. Our specialists respect your time and focus on giving you clear, useful information.",
+    a: "Usually around 10 to 15 minutes. We keep it focused so you walk away with something useful, not a lecture.",
   },
   {
     q: "How do I get started?",
-    a: "Simply share a few details through our private form or give us a call. A wellness specialist will reach out to schedule a convenient time to chat.",
+    a: "Easiest thing is to give us a call, or fill in the short form. A specialist will get back to you and find a time that actually works for you.",
   },
 ];
 
 const stats = [
-  { value: "10K+", label: "People Guided", icon: Users },
-  { value: "98%", label: "Would Recommend", icon: Star },
-  { value: "24/7", label: "Always Reachable", icon: Clock },
-  { value: "100%", label: "Privacy Protected", icon: Lock },
+  { value: "10K+", label: "People we've chatted with", icon: Users },
+  { value: "98%", label: "Would tell a friend", icon: Star },
+  { value: "24/7", label: "Here when you need us", icon: Clock },
+  { value: "100%", label: "Private by default", icon: Lock },
 ];
 
 const learningTopics = [
-  { icon: Stethoscope, title: "Understanding Conditions", text: "Learn how common health conditions develop, in simple everyday language." },
-  { icon: BookOpen, title: "Treatment Categories", text: "Understand the broad categories of wellness approaches available today." },
-  { icon: Lightbulb, title: "Lifestyle Factors", text: "Discover diet, sleep, and movement choices that shape long-term wellbeing." },
-  { icon: ClipboardList, title: "What to Ask a Provider", text: "Walk into your next appointment prepared with the right questions." },
-  { icon: GraduationCap, title: "Health Literacy", text: "Build confidence in reading information and making informed wellness choices." },
-  { icon: HeartHandshake, title: "Emotional Support", text: "Talk through worries with someone who genuinely listens, without judgement." },
+  { icon: Stethoscope, title: "Making sense of conditions", text: "We break down how common health issues actually work, without the textbook talk." },
+  { icon: BookOpen, title: "The lay of the land", text: "Get a clearer picture of the different wellness approaches people are using today." },
+  { icon: Lightbulb, title: "Everyday lifestyle stuff", text: "Sleep, food, movement and stress \u2014 the small choices that quietly add up over time." },
+  { icon: ClipboardList, title: "Questions for your doctor", text: "Walk into your next appointment with the kind of questions that get real answers." },
+  { icon: GraduationCap, title: "Reading the fine print", text: "Feel more confident decoding health info instead of second-guessing what it means." },
+  { icon: HeartHandshake, title: "Someone to talk to", text: "Sometimes you just want a calm voice on the other end. We're good at that bit." },
 ];
 
 const principles = [
-  { icon: Lock, title: "Private", text: "Conversations stay confidential between you and our specialist." },
-  { icon: HeartHandshake, title: "Empathetic", text: "We listen first. You set the pace and the topics that matter." },
-  { icon: ShieldCheck, title: "Honest", text: "Educational only — we never pressure, prescribe, or sell medication." },
-  { icon: GraduationCap, title: "Expert-led", text: "Conversations led by specialists trained in health education." },
+  { icon: Lock, title: "Private", text: "Whatever you share stays between you and the specialist on the call." },
+  { icon: HeartHandshake, title: "Kind", text: "We listen first. You set the pace and pick what we talk about." },
+  { icon: ShieldCheck, title: "Honest", text: "Education only. We won't pitch you anything, prescribe, or sell medication." },
+  { icon: GraduationCap, title: "Specialist-led", text: "You're talking with people trained to explain health, not push products." },
 ];
 
 const testimonials = [
-  { name: "Michael Carter", text: "I finally understood what my diagnosis actually meant — and what to ask my doctor next." },
-  { name: "Jessica Bennett", text: "The call was relaxed and informative. No pressure, just useful answers in plain words." },
-  { name: "David Thompson", text: "It helped me feel less alone with my questions. A genuinely supportive conversation." },
+  { name: "Michael Carter", text: "Honestly, I left the call understanding my own diagnosis for the first time. They didn't try to sell me a thing." },
+  { name: "Jessica Bennett", text: "I was a bit nervous picking up the phone, but it felt like chatting with a friend who happens to know their stuff." },
+  { name: "David Thompson", text: "I had a list of questions in my head for months. After 15 minutes I finally felt like I had answers I could work with." },
 ];
 
 const Index = () => (
   <Layout>
+    <SEO
+      title="MetrixConvo \u2014 Free Wellness Conversations With Real Specialists"
+      description="Talk to a friendly wellness specialist on a free, private call. Honest, educational guidance to help you make confident decisions about your health."
+      path="/"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "MetrixConvo",
+        url: "https://metrixconvo.com",
+        logo: "https://metrixconvo.com/logo.png",
+        description: "Wellness and health information platform offering free, private educational conversations with specialists.",
+      }}
+    />
     <CallPopup />
     {/* Hero */}
     <section className="relative overflow-hidden bg-gradient-to-br from-primary/8 via-background to-secondary/6 py-24 lg:py-36">
