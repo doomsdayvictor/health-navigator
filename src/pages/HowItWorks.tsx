@@ -214,9 +214,9 @@ const HowItWorks = () => (
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { quote: "It felt more like talking to a thoughtful friend than a call centre. I left feeling clearer.", name: "Sarah M." },
-            { quote: "No pressure, no jargon. They just helped me understand my options.", name: "James R." },
-            { quote: "I appreciated the honesty — they pointed me toward the right professional to speak with next.", name: "Priya K." },
+            { quote: "It felt more like talking to a thoughtful friend than a call centre. I left feeling clearer.", name: "Sarah Mitchell" },
+            { quote: "No pressure, no jargon. They just helped me understand my options.", name: "James Richardson" },
+            { quote: "I appreciated the honesty — they pointed me toward the right professional to speak with next.", name: "Emily Parker" },
           ].map((t) => (
             <Card key={t.name} className="hover:shadow-xl transition-all">
               <CardContent className="p-6">
