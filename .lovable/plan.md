@@ -1,12 +1,12 @@
 
 
-# MatrixMedSupport.com — Updated Plan
+# MetrixConvo.com — Updated Plan
 
 This revision adds brand logo and favicon generation to the existing build plan.
 
 ## New: Brand Logo & Favicon
 
-**Logo concept:** "MatrixMedSupport" — clean medical wordmark with a subtle matrix/grid motif integrated into the "M" letterform. Colors: medical blue (#1E40AF) + soft green (#10B981) on white.
+**Logo concept:** "MetrixConvo" — clean medical wordmark with a subtle matrix/grid motif integrated into the "M" letterform. Colors: medical blue (#1E40AF) + soft green (#10B981) on white.
 
 **Approach:**
 1. Use the Nano banana image generation API (`google/gemini-2.5-flash-image`) to generate a professional medical brand logo
@@ -16,7 +16,7 @@ This revision adds brand logo and favicon generation to the existing build plan.
 5. Use the logo in the site header/navbar and footer across all pages
 
 **Logo usage across the site:**
-- Navbar: Logo + "MatrixMedSupport" text
+- Navbar: Logo + "MetrixConvo" text
 - Footer: Logo with tagline
 - Consultation confirmation screen
 

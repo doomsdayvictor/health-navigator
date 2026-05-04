@@ -10,13 +10,13 @@ const Disclaimer = () => (
         <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-6 not-prose mb-8">
           <p className="font-heading font-bold text-foreground text-lg mb-2">Educational Information Only</p>
           <p className="text-muted-foreground">
-            MatrixMedSupport is a wellness &amp; health information platform. We are <strong>not a pharmacy, prescriber, or licensed medical provider</strong>. All information we provide — on this website, by phone, by email, or in any other format — is for <strong>educational purposes only</strong> and is not medical advice. Always consult a qualified, licensed healthcare professional before starting, stopping, or changing any treatment.
+            MetrixConvo is a wellness &amp; health information platform. We are <strong>not a pharmacy, prescriber, or licensed medical provider</strong>. All information we provide — on this website, by phone, by email, or in any other format — is for <strong>educational purposes only</strong> and is not medical advice. Always consult a qualified, licensed healthcare professional before starting, stopping, or changing any treatment.
           </p>
         </div>
 
         <h2>1. General Information</h2>
         <p>
-          The content available on matrixmedsupport.com and through any related communication is provided for informational and educational purposes only. It is not intended to be, and should not be relied upon as, a substitute for professional medical advice, diagnosis, treatment, or pharmacy services.
+          The content available on metrixconvo.com and through any related communication is provided for informational and educational purposes only. It is not intended to be, and should not be relied upon as, a substitute for professional medical advice, diagnosis, treatment, or pharmacy services.
         </p>
 
         <h2>2. No Medical Advice</h2>
@@ -31,7 +31,7 @@ const Disclaimer = () => (
 
         <h2>4. Not a Pharmacy</h2>
         <p>
-          MatrixMedSupport does <strong>not</strong> sell, supply, dispense, ship, source, broker, or facilitate the purchase of prescription medication, controlled substances, hormone therapies, antibiotics, weight-loss injectables, anabolic agents, or any other regulated pharmaceutical product. We do not connect users with online pharmacies or suppliers.
+          MetrixConvo does <strong>not</strong> sell, supply, dispense, ship, source, broker, or facilitate the purchase of prescription medication, controlled substances, hormone therapies, antibiotics, weight-loss injectables, anabolic agents, or any other regulated pharmaceutical product. We do not connect users with online pharmacies or suppliers.
         </p>
 
         <h2>5. No Guarantee of Results</h2>
@@ -61,7 +61,7 @@ const Disclaimer = () => (
 
         <h2>10. Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by law, MatrixMedSupport, its affiliates, officers, employees, contractors, and agents disclaim all liability for any loss, injury, or damage of any kind resulting from reliance on information made available through the Services.
+          To the maximum extent permitted by law, MetrixConvo, its affiliates, officers, employees, contractors, and agents disclaim all liability for any loss, injury, or damage of any kind resulting from reliance on information made available through the Services.
         </p>
 
         <h2>11. Updates</h2>
@@ -71,7 +71,7 @@ const Disclaimer = () => (
 
         <h2>12. Contact</h2>
         <p>
-          Questions? Email <a href="mailto:support@matrixmedsupport.com">support@matrixmedsupport.com</a>.
+          Questions? Email <a href="mailto:support@metrixconvo.com">support@metrixconvo.com</a>.
         </p>
       </div>
     </section>

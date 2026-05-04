@@ -8,7 +8,7 @@ const Privacy = () => (
         <p><strong>Last updated:</strong> May 1, 2026</p>
 
         <p>
-          MatrixMedSupport (“we”, “us”, “our”) respects your privacy. This Privacy Policy explains how we collect, use, share, and protect information when you visit matrixmedsupport.com, contact us by phone, or interact with our advertising. By using our website you agree to the practices described here.
+          MetrixConvo (“we”, “us”, “our”) respects your privacy. This Privacy Policy explains how we collect, use, share, and protect information when you visit metrixconvo.com, contact us by phone, or interact with our advertising. By using our website you agree to the practices described here.
         </p>
 
         <h2>1. Who We Are</h2>
@@ -92,7 +92,7 @@ const Privacy = () => (
           <li>Lodge a complaint with your local data protection authority.</li>
         </ul>
         <p>
-          To exercise any of these rights, email <a href="mailto:support@matrixmedsupport.com">support@matrixmedsupport.com</a>. We may need to verify your identity before responding.
+          To exercise any of these rights, email <a href="mailto:support@metrixconvo.com">support@metrixconvo.com</a>. We may need to verify your identity before responding.
         </p>
 
         <h3>9.1 California Residents (CCPA/CPRA)</h3>
@@ -117,7 +117,7 @@ const Privacy = () => (
 
         <h2>13. Contact</h2>
         <p>
-          For privacy questions or to exercise your rights, email <a href="mailto:support@matrixmedsupport.com">support@matrixmedsupport.com</a>.
+          For privacy questions or to exercise your rights, email <a href="mailto:support@metrixconvo.com">support@metrixconvo.com</a>.
         </p>
       </div>
     </section>
