@@ -11,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
 import CallButton from "@/components/CallButton";
+import CallPopup from "@/components/CallPopup";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -79,6 +80,7 @@ const testimonials = [
 
 const Index = () => (
   <Layout>
+    <CallPopup />
     {/* Hero */}
     <section className="relative overflow-hidden bg-gradient-to-br from-primary/8 via-background to-secondary/6 py-24 lg:py-36">
       <FloatingIcons />
