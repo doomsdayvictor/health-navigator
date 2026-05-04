@@ -403,6 +403,39 @@ const Index = () => (
       </div>
     </section>
 
+    {/* FAQ */}
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl floating-element-slow" />
+      <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl floating-element-reverse" />
+      <div className="container relative z-10 max-w-3xl">
+        <div className="text-center mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+            <MessageCircle size={16} /> Frequently Asked Questions
+          </div>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Answers to common questions</h2>
+          <p className="text-muted-foreground">Everything you need to know before your first wellness conversation.</p>
+        </div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((item, i) => (
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="border border-border bg-card rounded-xl px-5 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline py-5">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+      </div>
+    </section>
+
     {/* Trust / CTA */}
     <section className="py-24 relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-accent text-primary-foreground">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--secondary)/0.2),transparent_60%)]" />
