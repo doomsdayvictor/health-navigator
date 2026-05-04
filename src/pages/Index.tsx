@@ -95,7 +95,7 @@ const Index = () => (
                 Book a Free Conversation <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
-            <CallButton size="lg" className="text-base px-8" showNumber />
+            <CallButton size="lg" className="text-base px-8" label="Call Now" fullLabel={false} />
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
               <Link to="/services">How We Help</Link>
             </Button>
