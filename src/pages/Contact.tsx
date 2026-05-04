@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Clock, Send, MapPin, Sparkles } from "lucide-react";
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, CONTACT_PHONE_DISPLAY_2, CONTACT_PHONE_TEL_2 } from "@/lib/contact";
 import { useToast } from "@/hooks/use-toast";
 
 const fadeUp = {
@@ -51,6 +51,7 @@ const Contact = () => {
               {[
                 { icon: Mail, label: "Email", value: "support@matrixmedsupport.com", href: "mailto:support@matrixmedsupport.com", color: "from-primary/10 to-accent/10 text-primary" },
                 { icon: Phone, label: "Phone", value: CONTACT_PHONE_DISPLAY, href: `tel:${CONTACT_PHONE_TEL}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
+                { icon: Phone, label: "Alternate Phone", value: CONTACT_PHONE_DISPLAY_2, href: `tel:${CONTACT_PHONE_TEL_2}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
                 { icon: Clock, label: "Support Hours", value: "Mon–Fri, 9AM–6PM EST", href: null, color: "from-accent/10 to-primary/10 text-accent" },
                 { icon: MapPin, label: "Location", value: "Supporting patients globally", href: null, color: "from-primary/10 to-secondary/10 text-primary" },
               ].map((item, i) => (
