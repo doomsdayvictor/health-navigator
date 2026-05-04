@@ -57,22 +57,21 @@ const CallPopup = () => {
             <Phone size={26} />
           </div>
           <h2 className="text-2xl font-heading font-extrabold leading-tight">
-            Talk to a wellness specialist — free.
+            Hop on a free call with a wellness specialist
           </h2>
           <p className="mt-2 text-primary-foreground/85 text-sm">
-            A friendly, no obligation conversation. Educational guidance only.
-            No pressure, no sales.
+            A friendly chat, totally free. We listen, you ask questions, no one tries to sell you anything.
           </p>
 
           <div className="mt-5 grid grid-cols-3 gap-2 text-[11px] text-primary-foreground/85">
             <div className="flex flex-col items-center gap-1">
-              <ShieldCheck size={16} /> 100% Private
+              <ShieldCheck size={16} /> Stays private
             </div>
             <div className="flex flex-col items-center gap-1">
-              <Clock size={16} /> 10 to 20 min
+              <Clock size={16} /> ~10 to 20 min
             </div>
             <div className="flex flex-col items-center gap-1">
-              <HeartHandshake size={16} /> No obligation
+              <HeartHandshake size={16} /> No strings
             </div>
           </div>
 
@@ -108,8 +107,7 @@ const CallPopup = () => {
           </div>
 
           <p className="mt-5 text-[10px] text-primary-foreground/60 leading-relaxed">
-            Educational information only. We are not a pharmacy or prescriber and
-            do not provide medical diagnosis or treatment.
+            Wellness info only. We're not a pharmacy or prescriber, and we don't provide medical diagnosis or treatment.
           </p>
         </div>
       </DialogContent>
