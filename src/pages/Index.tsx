@@ -175,11 +175,11 @@ const Index = () => (
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
-            <motion.div key={step.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i} className="text-center space-y-4 relative">
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-primary/30 to-transparent" />
-              )}
+            <motion.div key={step.num} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i} className="text-center space-y-4 relative flex flex-col items-center">
               <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent text-primary-foreground text-xl font-heading font-bold shadow-lg shadow-primary/20">
+                {i < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-1/2 left-full w-[calc(100%+4rem)] h-px bg-gradient-to-r from-primary/30 to-transparent pointer-events-none" />
+                )}
                 {step.num}
               </div>
               <h3 className="font-heading font-semibold text-lg text-foreground">{step.title}</h3>
