@@ -12,7 +12,7 @@ const Footer = () => (
             <img src="/logo.png" alt="MetrixConvo" className="h-10 w-auto max-w-[200px] object-contain brightness-0 invert" />
           </Link>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
-            Smarter medical support, delivered with care. Access trusted solutions for your health needs.
+            Honest wellness conversations with real specialists. Friendly, private, and always on your terms.
           </p>
           <div className="flex items-center gap-1 text-xs text-primary-foreground/40">
             <span>Built with</span> <Heart size={12} className="text-secondary fill-secondary" /> <span>for your health</span>
@@ -87,9 +87,9 @@ const Footer = () => (
       </div>
 
       <div className="mt-12 pt-6 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40">
-        <p>© {new Date().getFullYear()} MetrixConvo. All rights reserved.</p>
+        <p>\u00a9 {new Date().getFullYear()} MetrixConvo. All rights reserved.</p>
         <p className="mt-2 max-w-2xl mx-auto">
-          MetrixConvo does not provide medical diagnosis or prescriptions. All information is for educational purposes only. Consult a licensed healthcare provider before use.
+          MetrixConvo doesn't diagnose or prescribe. Everything we share is for general wellness information only \u2014 always check in with a licensed healthcare provider before making changes.
         </p>
       </div>
     </div>

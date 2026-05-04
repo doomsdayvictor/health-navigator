@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { getTreatmentBySlug } from "@/data/treatments";
 import CallButton from "@/components/CallButton";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -19,10 +20,15 @@ const TreatmentDetail = () => {
 
   return (
     <Layout>
+      <SEO
+        title={`${treatment.title} \u2014 Wellness Topic | MetrixConvo`}
+        description={treatment.description}
+        path={`/treatments/${treatment.slug}`}
+      />
       <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container max-w-3xl">
           <Link to="/treatments" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8">
-            <ArrowLeft size={16} /> Back to All Treatments
+            <ArrowLeft size={16} /> Back to all topics
           </Link>
 
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="space-y-8">
@@ -38,7 +44,7 @@ const TreatmentDetail = () => {
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-4">Key Benefits</h3>
+                <h3 className="font-heading font-semibold text-lg text-foreground mb-4">Why people care about it</h3>
                 <ul className="space-y-3">
                   {treatment.benefits.map((b) => (
                     <li key={b} className="flex items-start gap-3">
@@ -51,9 +57,9 @@ const TreatmentDetail = () => {
             </Card>
 
             <div className="bg-muted rounded-xl p-8 text-center space-y-4">
-              <h3 className="text-xl font-heading font-bold text-foreground">Interested in {treatment.title}?</h3>
+              <h3 className="text-xl font-heading font-bold text-foreground">Want to chat about {treatment.title}?</h3>
               <p className="text-muted-foreground">
-                Call us for a free, confidential wellness conversation to explore your options.
+                Give us a ring for a free, private chat. We'll talk it through with you, no pressure.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <CallButton size="lg" showNumber />

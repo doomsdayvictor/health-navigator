@@ -1,7 +1,9 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 
 const AdvertisingDisclosure = () => (
   <Layout>
+    <SEO title="Advertising Disclosure | MetrixConvo" description="How advertising works on MetrixConvo and how we keep things transparent." path="/advertising-disclosure" />
     <section className="py-20 bg-background">
       <div className="container max-w-3xl prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-heading">
         <h1>Advertising Disclosure</h1>

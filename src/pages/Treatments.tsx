@@ -24,6 +24,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { treatmentCategories } from "@/data/treatments";
 import CallButton from "@/components/CallButton";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -67,6 +68,11 @@ const testimonials = [
 
 const Treatments = () => (
   <Layout>
+    <SEO
+      title="Wellness Topics We Talk About \u2014 MetrixConvo"
+      description="Browse the wellness topics our specialists cover on a free phone call. Honest, plain-English chats designed to help you understand your own health better."
+      path="/treatments"
+    />
     {/* Hero */}
     <section className="relative py-24 bg-gradient-to-b from-primary/8 via-background to-secondary/5 overflow-hidden">
       <FloatingIcons count={8} />
@@ -82,14 +88,14 @@ const Treatments = () => (
             </div>
           </motion.div>
           <motion.div variants={fadeUp} custom={1} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-            <Sparkles size={16} /> Explore Options
+            <Sparkles size={16} /> What we chat about
           </motion.div>
           <motion.h1 variants={fadeUp} custom={2} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
-            Wellness Topics{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">We Talk About</span>
+            Wellness topics{" "}
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">we love talking through</span>
           </motion.h1>
           <motion.p variants={fadeUp} custom={3} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Browse the wellness areas our specialists cover during a free educational conversation. Each topic is explained in plain, simple language.
+            Have a scroll through the wellness areas our specialists cover. Whatever you bring up, we'll talk about it in plain, everyday language.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-3 pt-2">
             <CallButton label="Talk to a Specialist" fullLabel={false} />
@@ -154,10 +160,10 @@ const Treatments = () => (
                   <h3 className="font-heading font-semibold text-xl">What we do</h3>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Free verbal education across wellness topics</li>
-                  <li>• Plain-language explanations of conditions</li>
-                  <li>• Help preparing better questions for your doctor</li>
-                  <li>• A private, judgement-free conversation</li>
+                  <li>\u2022 Free, friendly chats across wellness topics</li>
+                  <li>\u2022 Conditions explained in plain English</li>
+                  <li>\u2022 Help shaping smarter questions for your doctor</li>
+                  <li>\u2022 A private chat, zero judgement</li>
                 </ul>
               </CardContent>
             </Card>
@@ -169,13 +175,13 @@ const Treatments = () => (
                   <div className="w-11 h-11 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
                     <ShieldCheck size={22} />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl">What we are not</h3>
+                  <h3 className="font-heading font-semibold text-xl">What we're not</h3>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Not a pharmacy or medication seller</li>
-                  <li>• Not a clinic — we do not diagnose</li>
-                  <li>• Not a prescriber — we do not issue prescriptions</li>
-                  <li>• Not a replacement for your licensed provider</li>
+                  <li>\u2022 Not a pharmacy and not selling medication</li>
+                  <li>\u2022 Not a clinic \u2014 we don't diagnose anything</li>
+                  <li>\u2022 Not a prescriber \u2014 no scripts here</li>
+                  <li>\u2022 Not a stand-in for your own doctor</li>
                 </ul>
               </CardContent>
             </Card>

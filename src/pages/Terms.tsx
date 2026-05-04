@@ -1,7 +1,9 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 
 const Terms = () => (
   <Layout>
+    <SEO title="Terms of Service | MetrixConvo" description="The rules of the road for using MetrixConvo. Honest, plain-English terms covering what we do and don't do." path="/terms" />
     <section className="py-20 bg-background">
       <div className="container max-w-3xl prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-heading">
         <h1>Terms of Service</h1>

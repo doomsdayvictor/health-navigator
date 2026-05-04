@@ -12,7 +12,7 @@ const FloatingCallFab = () => (
       <Phone size={18} />
     </span>
     <span className="hidden sm:flex flex-col leading-tight pr-1">
-      <span className="text-[10px] uppercase tracking-wider opacity-80">Speak with a specialist</span>
+      <span className="text-[10px] uppercase tracking-wider opacity-80">Have a quick chat</span>
       <span className="text-sm font-semibold">{CONTACT_PHONE_DISPLAY}</span>
     </span>
   </a>

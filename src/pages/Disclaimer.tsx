@@ -1,7 +1,9 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 
 const Disclaimer = () => (
   <Layout>
+    <SEO title="Disclaimer | MetrixConvo" description="An honest reminder of what MetrixConvo is and isn't. We're a wellness information service, not a medical provider." path="/disclaimer" />
     <section className="py-20 bg-background">
       <div className="container max-w-3xl prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-heading">
         <h1>Disclaimer</h1>

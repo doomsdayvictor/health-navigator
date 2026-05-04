@@ -7,6 +7,7 @@ import FloatingIcons from "@/components/FloatingIcons";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -47,6 +48,11 @@ const Blog = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Wellness Blog \u2014 Honest Reads From MetrixConvo"
+        description="Easy-to-read articles on wellness, sleep, stress, lifestyle and more. Written for real people, not search engines."
+        path="/blog"
+      />
       <section className="relative py-24 bg-gradient-to-b from-primary/8 to-background overflow-hidden">
         <FloatingIcons count={6} />
         <div className="absolute bottom-20 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
@@ -54,14 +60,14 @@ const Blog = () => {
         <div className="container max-w-5xl relative z-10">
           <motion.div initial="hidden" animate="visible" className="text-center space-y-4 mb-12">
             <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-              <BookOpen size={16} /> Health Insights
+              <BookOpen size={16} /> Reads worth your time
             </motion.div>
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
-              Health & Wellness{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Blog</span>
+              The MetrixConvo{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">blog</span>
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Expert insights, tips, and guidance for your health journey.
+              Honest, easy-to-read articles on the wellness stuff that actually shows up in everyday life.
             </motion.p>
           </motion.div>
 
@@ -106,7 +112,7 @@ const Blog = () => {
           </div>
 
           {filtered.length === 0 && (
-            <p className="text-center text-muted-foreground py-12">No posts in this category yet. Check back soon!</p>
+            <p className="text-center text-muted-foreground py-12">Nothing in this category just yet \u2014 swing by again soon.</p>
           )}
         </div>
       </section>

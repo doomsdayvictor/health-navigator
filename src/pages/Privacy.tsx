@@ -1,7 +1,9 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 
 const Privacy = () => (
   <Layout>
+    <SEO title="Privacy Policy | MetrixConvo" description="How MetrixConvo collects, uses and protects your information. Plain-English version of our privacy practices." path="/privacy" />
     <section className="py-20 bg-background">
       <div className="container max-w-3xl prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-heading">
         <h1>Privacy Policy</h1>

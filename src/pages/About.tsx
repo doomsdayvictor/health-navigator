@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import CallButton from "@/components/CallButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -18,6 +19,11 @@ const fadeUp = {
 
 const About = () => (
   <Layout>
+    <SEO
+      title="About MetrixConvo \u2014 Real People, Honest Wellness Conversations"
+      description="Meet the team behind MetrixConvo. We're a small group of wellness specialists who help people make sense of their health through free, friendly phone calls."
+      path="/about"
+    />
     <section className="relative py-24 bg-gradient-to-b from-primary/8 via-background to-secondary/5 overflow-hidden">
       <FloatingIcons count={8} />
       <div className="absolute top-40 right-0 w-80 h-80 bg-accent/8 rounded-full blur-3xl" />
@@ -36,12 +42,11 @@ const About = () => (
           </motion.div>
           <motion.h1 variants={fadeUp} custom={2} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
             Helping you{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">understand health</span>{" "}
-            — one conversation at a time
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">make sense of your health</span>{" "}
+            one chat at a time
           </motion.h1>
           <motion.p variants={fadeUp} custom={3} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            MetrixConvo is a disease & medication education platform. Talk to our specialists on a free call to learn about
-            conditions, treatment options, and how medications generally work — explained in simple, human language.
+            MetrixConvo is a wellness information service. Hop on a free call with one of our specialists and we'll talk through what's on your mind in plain, everyday language.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-3 pt-2">
             <CallButton label="Talk to a Specialist" fullLabel={false} />
@@ -53,9 +58,9 @@ const About = () => (
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {[
-            { icon: Target, title: "Our Mission", text: "To make wellness guidance approachable for everyone — clear, kind, and free of pressure.", color: "from-primary/10 to-accent/10 text-primary" },
-            { icon: Eye, title: "Our Vision", text: "A world where anyone can have a thoughtful wellness conversation before making important health decisions.", color: "from-secondary/10 to-secondary/5 text-secondary" },
-            { icon: Heart, title: "Our Values", text: "Privacy, honesty, and a genuine people-first approach guide everything we do.", color: "from-accent/10 to-primary/10 text-accent" },
+            { icon: Target, title: "Why we exist", text: "To make wellness chats feel approachable instead of intimidating. Clear, kind, and zero pressure.", color: "from-primary/10 to-accent/10 text-primary" },
+            { icon: Eye, title: "What we're after", text: "A world where you can have a thoughtful wellness conversation before any big health decision.", color: "from-secondary/10 to-secondary/5 text-secondary" },
+            { icon: Heart, title: "What we believe", text: "Privacy, honesty, and putting people first. That's pretty much the whole playbook.", color: "from-accent/10 to-primary/10 text-accent" },
           ].map((item, i) => (
             <motion.div key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
               <Card className="h-full text-center group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -74,10 +79,10 @@ const About = () => (
         {/* Stats row */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { icon: Users, value: "10K+", label: "People Guided" },
-            { icon: Globe, value: "50+", label: "Countries" },
-            { icon: Award, value: "98%", label: "Would Recommend" },
-            { icon: ShieldCheck, value: "100%", label: "Private" },
+            { icon: Users, value: "10K+", label: "People we've talked to" },
+            { icon: Globe, value: "50+", label: "Countries we've reached" },
+            { icon: Award, value: "98%", label: "Would tell a friend" },
+            { icon: ShieldCheck, value: "100%", label: "Private, every time" },
           ].map((stat, i) => (
             <motion.div key={stat.label} variants={fadeUp} custom={i}>
               <Card className="text-center border-none shadow-md">
@@ -92,16 +97,12 @@ const About = () => (
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="prose prose-lg max-w-none text-muted-foreground">
-          <h2 className="font-heading text-foreground">Who We Are</h2>
+          <h2 className="font-heading text-foreground">Who we are</h2>
           <p>
-            MetrixConvo is a disease & medication education platform. We are not a pharmacy, we do not diagnose, and we do not
-            prescribe. What we do is help people understand their condition, learn how different categories of treatment generally
-            work, and feel confident when they speak with a licensed healthcare provider.
+            MetrixConvo is a wellness information service. We're not a pharmacy, we don't diagnose anything, and we don't write prescriptions. What we do is help you wrap your head around what's going on with your health, so you feel a lot more confident the next time you sit down with a licensed provider.
           </p>
           <p>
-            Whether you're curious about a recent diagnosis, the side-effects you've read about, or simply want to understand a
-            health topic in plain English, our specialists are here for a calm, educational phone conversation — always alongside
-            the care of your own qualified provider.
+            Whether you're trying to make sense of a recent diagnosis, something you read online that's been nagging at you, or you just want to understand a health topic in plain English, our specialists are here for a calm, friendly phone chat. Always alongside your own doctor, never instead of them.
           </p>
           <p className="text-sm">
             <em>Educational only. Not a substitute for professional medical advice, diagnosis, or treatment. Always consult a licensed healthcare provider.</em>

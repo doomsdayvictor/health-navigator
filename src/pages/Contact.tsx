@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Clock, MapPin, Sparkles } from "lucide-react";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, CONTACT_PHONE_DISPLAY_2, CONTACT_PHONE_TEL_2 } from "@/lib/contact";
 import CallButton from "@/components/CallButton";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -13,6 +14,11 @@ const fadeUp = {
 
 const Contact = () => (
     <Layout>
+      <SEO
+        title="Contact MetrixConvo \u2014 Talk to a Wellness Specialist"
+        description="Call, email, or message us. A real wellness specialist will get back to you and help you make sense of whatever's on your mind."
+        path="/contact"
+      />
       <section className="relative py-24 bg-gradient-to-b from-primary/8 to-background overflow-hidden">
         <FloatingIcons count={6} />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
@@ -20,12 +26,12 @@ const Contact = () => (
         <div className="container max-w-4xl relative z-10">
           <motion.div initial="hidden" animate="visible" className="text-center space-y-4 mb-14">
             <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
-              <Sparkles size={16} /> Get In Touch
+              <Sparkles size={16} /> Say hello
             </motion.div>
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
-              Contact <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Us</span>
+              Get in <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">touch</span>
             </motion.h1>
-            <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground">We're here to help. Give us a call anytime.</motion.p>
+            <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground">We're around when you need us. Pick up the phone whenever it suits you.</motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-3 pt-2">
               <CallButton size="lg" showNumber />
             </motion.div>
@@ -35,9 +41,9 @@ const Contact = () => (
               {[
                 { icon: Mail, label: "Email", value: "support@metrixconvo.com", href: "mailto:support@metrixconvo.com", color: "from-primary/10 to-accent/10 text-primary" },
                 { icon: Phone, label: "Phone", value: CONTACT_PHONE_DISPLAY, href: `tel:${CONTACT_PHONE_TEL}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
-                { icon: Phone, label: "Alternate Phone", value: CONTACT_PHONE_DISPLAY_2, href: `tel:${CONTACT_PHONE_TEL_2}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
-                { icon: Clock, label: "Support Hours", value: "Mon–Fri, 9AM–6PM EST", href: null, color: "from-accent/10 to-primary/10 text-accent" },
-                { icon: MapPin, label: "Location", value: "Supporting patients globally", href: null, color: "from-primary/10 to-secondary/10 text-primary" },
+                { icon: Phone, label: "Backup line", value: CONTACT_PHONE_DISPLAY_2, href: `tel:${CONTACT_PHONE_TEL_2}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
+                { icon: Clock, label: "When we're around", value: "Mon\u2013Fri, 9AM\u20136PM EST", href: null, color: "from-accent/10 to-primary/10 text-accent" },
+                { icon: MapPin, label: "Where we are", value: "Helping people all over the world", href: null, color: "from-primary/10 to-secondary/10 text-primary" },
               ].map((item, i) => (
                 <motion.div key={item.label} variants={fadeUp} custom={i}>
                   <Card className="group hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">

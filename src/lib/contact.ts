@@ -6,4 +6,4 @@ export const CONTACT_PHONES = [
   { display: CONTACT_PHONE_DISPLAY, tel: CONTACT_PHONE_TEL },
   { display: CONTACT_PHONE_DISPLAY_2, tel: CONTACT_PHONE_TEL_2 },
 ];
-export const CALL_CTA_LABEL = "Call for a Free Conversation";
+export const CALL_CTA_LABEL = "Call us for a free chat";

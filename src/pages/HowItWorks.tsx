@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import CallButton from "@/components/CallButton";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -27,14 +28,19 @@ const fadeUp = {
 };
 
 const steps = [
-  { icon: ClipboardList, title: "Start the Conversation", description: "Give us a call and share your wellness questions, goals, and what you'd like to learn. All conversations are kept strictly confidential.", color: "from-primary to-accent" },
-  { icon: UserCheck, title: "Get Reviewed by Specialists", description: "Our team of healthcare support specialists reviews your submission and prepares personalized recommendations based on your unique profile.", color: "from-secondary to-secondary/70" },
-  { icon: HeartPulse, title: "Receive Expert Guidance", description: "You'll receive tailored guidance including treatment support options, lifestyle recommendations, and next steps for your health journey.", color: "from-accent to-primary" },
-  { icon: RefreshCw, title: "Ongoing Support", description: "Your care doesn't end with a single consultation. We provide follow-ups, progress tracking, and plan adjustments as your needs evolve.", color: "from-primary to-secondary" },
+  { icon: ClipboardList, title: "Pick up the phone", description: "Give us a ring and share whatever's on your mind \u2014 questions, worries, goals. Everything stays between us.", color: "from-primary to-accent" },
+  { icon: UserCheck, title: "We listen and prep", description: "One of our wellness specialists takes a look at what you've shared so the call is genuinely useful, not generic.", color: "from-secondary to-secondary/70" },
+  { icon: HeartPulse, title: "Have the chat", description: "We talk it through together \u2014 in plain English, at your pace, with no scripts and no upselling.", color: "from-accent to-primary" },
+  { icon: RefreshCw, title: "Stay in touch", description: "Things change. Call us back whenever new questions pop up. We'll be around.", color: "from-primary to-secondary" },
 ];
 
 const HowItWorks = () => (
   <Layout>
+    <SEO
+      title="How It Works \u2014 A Free Wellness Call With MetrixConvo"
+      description="Here's exactly what happens when you call us. No forms, no waiting rooms \u2014 just a friendly chat with a wellness specialist who actually listens."
+      path="/how-it-works"
+    />
     <section className="relative py-24 bg-gradient-to-b from-primary/8 to-background overflow-hidden">
       <FloatingIcons count={8} />
       <div className="absolute top-60 right-0 w-72 h-72 bg-accent/8 rounded-full blur-3xl" />
@@ -50,16 +56,16 @@ const HowItWorks = () => (
             </div>
           </motion.div>
           <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-            <Sparkles size={16} /> Simple Process
+            <Sparkles size={16} /> No fuss, just a chat
           </motion.div>
           <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
-            How It <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Works</span>
+            How it <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">works</span>
           </motion.h1>
           <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our streamlined process makes accessing quality health support simple and stress-free.
+            No forms to wrestle with, no waiting rooms. Just a relaxed phone call with someone who knows their stuff.
           </motion.p>
           <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-3 pt-4">
-            <CallButton size="lg" label="Call Now" />
+            <CallButton size="lg" label="Give us a call" />
           </motion.div>
         </motion.div>
 
@@ -100,8 +106,8 @@ const HowItWorks = () => (
     <section className="py-20 bg-muted/30">
       <div className="container max-w-5xl">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">What to Expect</h2>
-          <p className="text-muted-foreground mt-3">A clear picture of how each conversation unfolds — no pressure, no obligation.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">What to expect</h2>
+          <p className="text-muted-foreground mt-3">Here's the honest version \u2014 what we do, and what we won't.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="hover:shadow-xl transition-all">
@@ -110,13 +116,13 @@ const HowItWorks = () => (
                 <div className="w-11 h-11 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center">
                   <CheckCircle2 size={22} />
                 </div>
-                <h3 className="text-xl font-heading font-bold">What we offer</h3>
+                <h3 className="text-xl font-heading font-bold">What you'll get</h3>
               </div>
               <ul className="space-y-2 text-muted-foreground">
-                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> A friendly, judgment-free space to share concerns</li>
-                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> General wellness information and educational guidance</li>
-                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> Help understanding what to discuss with a qualified provider</li>
-                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> Clear, plain-language answers to your questions</li>
+                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> A friendly space to say what's actually on your mind</li>
+                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> General wellness info you can actually use</li>
+                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> A nudge in the right direction for your next doctor visit</li>
+                <li className="flex gap-2"><CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5" /> Plain answers, no \"medicalese\"</li>
               </ul>
             </CardContent>
           </Card>
@@ -126,13 +132,13 @@ const HowItWorks = () => (
                 <div className="w-11 h-11 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
                   <ShieldCheck size={22} />
                 </div>
-                <h3 className="text-xl font-heading font-bold">What we don't do</h3>
+                <h3 className="text-xl font-heading font-bold">What we won't do</h3>
               </div>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• We are not a pharmacy and do not sell or supply medication</li>
-                <li>• We do not diagnose conditions or write prescriptions</li>
-                <li>• We do not replace your doctor or licensed healthcare provider</li>
-                <li>• We never share your details without your consent</li>
+                <li>\u2022 Sell or supply any medication \u2014 we're not a pharmacy</li>
+                <li>\u2022 Diagnose anything or write you a prescription</li>
+                <li>\u2022 Try to replace your own doctor</li>
+                <li>\u2022 Pass your details on without asking you first</li>
               </ul>
             </CardContent>
           </Card>
@@ -144,15 +150,15 @@ const HowItWorks = () => (
     <section className="py-20">
       <div className="container max-w-6xl">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">How a Conversation Flows</h2>
-          <p className="text-muted-foreground mt-3">Four simple moments — from first hello to next steps.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">How the call usually goes</h2>
+          <p className="text-muted-foreground mt-3">Four small steps, from \"hello\" to \"thanks, that helped\".</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
-            { icon: PhoneCall, title: "You reach out", desc: "Call us or fill out the form — whichever feels easier.", num: "01" },
-            { icon: MessageCircle, title: "We listen", desc: "Share what's on your mind. We ask thoughtful questions.", num: "02" },
-            { icon: BookOpen, title: "We educate", desc: "Get clear, balanced wellness information tailored to you.", num: "03" },
-            { icon: ClipboardList, title: "You decide", desc: "Walk away informed and ready for next steps with a provider.", num: "04" },
+            { icon: PhoneCall, title: "You reach out", desc: "Call us or fill in the form \u2014 whichever feels easier.", num: "01" },
+            { icon: MessageCircle, title: "We listen", desc: "You talk, we listen, then we ask the questions that actually matter.", num: "02" },
+            { icon: BookOpen, title: "We talk it through", desc: "Clear, balanced info shaped around what you actually want to know.", num: "03" },
+            { icon: ClipboardList, title: "You take it from here", desc: "You'll know exactly what to do next, and what to ask your doctor.", num: "04" },
           ].map((s) => (
             <Card key={s.title} className="relative overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all">
               <CardContent className="p-6">
@@ -173,15 +179,15 @@ const HowItWorks = () => (
     <section className="py-20 bg-gradient-to-b from-background to-muted/30">
       <div className="container max-w-6xl">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Our Principles</h2>
-          <p className="text-muted-foreground mt-3">The values that shape every interaction.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">What we stand for</h2>
+          <p className="text-muted-foreground mt-3">A few things that shape every call.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
-            { icon: Lock, title: "Private", desc: "Your details stay confidential. Always." },
-            { icon: HeartHandshake, title: "Empathetic", desc: "Real humans who genuinely care about your wellbeing." },
-            { icon: ShieldCheck, title: "Honest", desc: "Educational guidance, never pushy sales." },
-            { icon: GraduationCap, title: "Expert-led", desc: "Information shaped by experienced wellness specialists." },
+            { icon: Lock, title: "Private", desc: "What you share stays with us. Always." },
+            { icon: HeartHandshake, title: "Kind", desc: "Real humans who actually care how you're doing." },
+            { icon: ShieldCheck, title: "Honest", desc: "Education first. We won't pitch you anything." },
+            { icon: GraduationCap, title: "Specialist-led", desc: "Trained wellness specialists, not a call centre script." },
           ].map((p) => (
             <Card key={p.title} className="text-center hover:shadow-xl transition-all">
               <CardContent className="p-6">
@@ -201,14 +207,14 @@ const HowItWorks = () => (
     <section className="py-20">
       <div className="container max-w-6xl">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">What People Say</h2>
-          <p className="text-muted-foreground mt-3">Reflections from people who've had a conversation with us.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">What people say</h2>
+          <p className="text-muted-foreground mt-3">In their own words, after a call with us.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { quote: "It felt more like talking to a thoughtful friend than a call centre. I left feeling clearer.", name: "Sarah Mitchell" },
-            { quote: "No pressure, no jargon. They just helped me understand my options.", name: "James Richardson" },
-            { quote: "I appreciated the honesty — they pointed me toward the right professional to speak with next.", name: "Emily Parker" },
+            { quote: "Felt more like a chat with a thoughtful friend than a call centre. I hung up feeling miles clearer.", name: "Sarah Mitchell" },
+            { quote: "No pressure, no jargon. They just helped me figure out what my actual options were.", name: "James Richardson" },
+            { quote: "I liked that they were straight with me \u2014 they pointed me to the right professional and that was that.", name: "Emily Parker" },
           ].map((t) => (
             <Card key={t.name} className="hover:shadow-xl transition-all">
               <CardContent className="p-6">
@@ -226,15 +232,15 @@ const HowItWorks = () => (
     <section className="py-20 bg-muted/30">
       <div className="container max-w-4xl">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Common Questions</h2>
-          <p className="text-muted-foreground mt-3">Quick answers to what people often ask before reaching out.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Things people usually ask</h2>
+          <p className="text-muted-foreground mt-3">A quick rundown of what comes up most before that first call.</p>
         </div>
         <div className="space-y-4">
           {[
-            { q: "Is the conversation really free?", a: "Yes. Our wellness conversations are completely free with no obligation." },
-            { q: "Will I be pressured into anything?", a: "Never. We share information so you can make informed choices on your own time." },
-            { q: "How long does a conversation take?", a: "Most chats run 10–20 minutes — longer if you have more to discuss." },
-            { q: "Is my information kept private?", a: "Absolutely. Everything you share stays confidential and is never sold." },
+            { q: "Is the call really free?", a: "Yep, totally free, no strings. You'll never get a surprise charge from us." },
+            { q: "Will I get pressured into anything?", a: "Never. We share info so you can decide things on your own time, in your own way." },
+            { q: "How long does a call usually take?", a: "Most chats land somewhere between 10 and 20 minutes \u2014 longer if you've got a lot on your mind." },
+            { q: "Is what I share kept private?", a: "Always. What you tell us stays with us. We don't sell data and we don't share without your okay." },
           ].map((f) => (
             <Card key={f.q} className="hover:shadow-md transition-all">
               <CardContent className="p-6">

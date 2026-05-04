@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Calendar } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { getBlogPost } from "@/data/blogPosts";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -17,6 +18,19 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <SEO
+        title={`${post.title} | MetrixConvo`}
+        description={post.excerpt || post.title}
+        path={`/blog/${post.slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: { "@type": "Organization", name: "MetrixConvo" },
+        }}
+      />
       <article className="py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container max-w-3xl">
           <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8">
