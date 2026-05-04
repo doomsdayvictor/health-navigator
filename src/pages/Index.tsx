@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Shield, Users, Zap, Heart, Stethoscope, Brain, Pill, Moon, Activity, Droplets,
+  Shield, Users, Zap, Heart, Stethoscope, Brain, Moon, Activity, Droplets,
   ArrowRight, CheckCircle, Star, Clock, Lock, Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,18 +20,18 @@ const staggerContainer = {
 };
 
 const categories = [
-  { icon: Stethoscope, title: "Men's Health", description: "Vitality and wellness solutions tailored for men", slug: "mens-health", color: "bg-primary/10 text-primary" },
-  { icon: Activity, title: "Hormone Support", description: "Balanced hormone therapy and TRT options", slug: "hormone-support", color: "bg-secondary/10 text-secondary" },
-  { icon: Pill, title: "Infections & Antibiotics", description: "Guidance on infection treatment support", slug: "infections", color: "bg-accent/10 text-accent" },
-  { icon: Moon, title: "Sleep & Wellness", description: "Better sleep and cognitive wellness support", slug: "sleep-wellness", color: "bg-primary/10 text-primary" },
-  { icon: Heart, title: "Heart & Blood Care", description: "Circulation and cardiovascular support", slug: "heart-blood", color: "bg-secondary/10 text-secondary" },
-  { icon: Droplets, title: "Diabetes Support", description: "Blood sugar management and care", slug: "diabetes", color: "bg-accent/10 text-accent" },
+  { icon: Stethoscope, title: "Men's Wellness", description: "Everyday energy, focus, and confidence — explained simply.", slug: "mens-health", color: "bg-primary/10 text-primary" },
+  { icon: Activity, title: "Hormonal Balance Education", description: "Understand how hormonal health shapes how you feel.", slug: "hormone-support", color: "bg-secondary/10 text-secondary" },
+  { icon: Shield, title: "Immune & Recovery Wellness", description: "Habits that support your body's natural resilience.", slug: "immune-recovery", color: "bg-accent/10 text-accent" },
+  { icon: Moon, title: "Sleep & Mind Wellness", description: "Better rest, focus, and mental clarity.", slug: "sleep-wellness", color: "bg-primary/10 text-primary" },
+  { icon: Heart, title: "Heart & Circulation Wellness", description: "Lifestyle education for everyday heart wellbeing.", slug: "heart-blood", color: "bg-secondary/10 text-secondary" },
+  { icon: Droplets, title: "Metabolic Wellness", description: "Education on metabolism, energy, and balance.", slug: "metabolic", color: "bg-accent/10 text-accent" },
 ];
 
 const steps = [
-  { num: "01", title: "Share Your Needs", description: "Tell us about your health concerns through our secure consultation form.", icon: ClipboardIcon },
-  { num: "02", title: "Get Expert Guidance", description: "Our specialists review your needs and provide personalized recommendations.", icon: Users },
-  { num: "03", title: "Receive Ongoing Support", description: "Get continuous care, follow-ups, and adjustments to your wellness plan.", icon: Heart },
+  { num: "01", title: "Tell Us About You", description: "Share a few details about your wellness goals through our private form — no commitment required.", icon: ClipboardIcon },
+  { num: "02", title: "Talk With a Specialist", description: "A wellness specialist reviews your goals and prepares personalized educational guidance.", icon: Users },
+  { num: "03", title: "Stay Supported", description: "Receive ongoing wellness check-ins and clear next steps to discuss with a licensed provider.", icon: Heart },
 ];
 
 function ClipboardIcon(props: any) {
@@ -39,17 +39,17 @@ function ClipboardIcon(props: any) {
 }
 
 const features = [
-  { icon: Shield, title: "Confidential & Secure", description: "Your health information is protected with industry-leading security." },
-  { icon: Users, title: "Expert-Backed Support", description: "Our team of specialists ensures quality care for every patient." },
-  { icon: Zap, title: "Easy Process", description: "Streamlined consultations that respect your time and privacy." },
-  { icon: Brain, title: "Reliable Network", description: "Trusted fulfillment and care network you can depend on." },
+  { icon: Shield, title: "Private & Confidential", description: "Your information is protected and never shared without your permission." },
+  { icon: Users, title: "People-First Specialists", description: "Friendly wellness specialists who actually listen to your goals." },
+  { icon: Zap, title: "Simple & Stress-Free", description: "A short conversation that respects your time — no jargon, no pressure." },
+  { icon: Brain, title: "Educational, Always", description: "Clear, honest information so you can make confident wellness decisions." },
 ];
 
 const stats = [
-  { value: "10K+", label: "Patients Supported", icon: Users },
-  { value: "98%", label: "Satisfaction Rate", icon: Star },
-  { value: "24/7", label: "Available Support", icon: Clock },
-  { value: "100%", label: "Privacy Secured", icon: Lock },
+  { value: "10K+", label: "People Guided", icon: Users },
+  { value: "98%", label: "Would Recommend", icon: Star },
+  { value: "24/7", label: "Always Reachable", icon: Clock },
+  { value: "100%", label: "Privacy Protected", icon: Lock },
 ];
 
 const Index = () => (
@@ -69,16 +69,16 @@ const Index = () => (
         >
           <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
             <Sparkles size={16} />
-            Trusted Medical Support Platform
+            Personalized Wellness Guidance
           </motion.div>
           <motion.h1
             variants={fadeUp}
             custom={1}
             className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-foreground leading-tight"
           >
-            Smarter Medical Support.{" "}
+            Better Wellness Decisions,{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              Delivered with Care.
+              Made Simple.
             </span>
           </motion.h1>
           <motion.p
@@ -86,16 +86,16 @@ const Index = () => (
             custom={2}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Access trusted solutions for your health needs from consultation to ongoing care.
+            Talk to a friendly wellness specialist for personalized, educational guidance — no pressure, just clarity.
           </motion.p>
           <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="text-base px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
               <Link to="/consultation">
-                Get Started <ArrowRight className="ml-2" size={18} />
+                Book a Free Conversation <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
-              <Link to="/services">Explore Services</Link>
+              <Link to="/services">How We Help</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -136,9 +136,9 @@ const Index = () => (
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-medium text-secondary uppercase tracking-wider">What We Offer</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">Treatment Categories</h2>
-          <p className="mt-3 text-muted-foreground">Explore our comprehensive range of medical support options.</p>
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Wellness Areas</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">Where We Can Help</h2>
+          <p className="mt-3 text-muted-foreground">Educational guidance across the wellness topics that matter most.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
@@ -170,8 +170,8 @@ const Index = () => (
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-medium text-secondary uppercase tracking-wider">Simple Process</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">How It Works</h2>
-          <p className="mt-3 text-muted-foreground">Three simple steps to better health support.</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">How a Conversation Works</h2>
+          <p className="mt-3 text-muted-foreground">Three simple steps to clearer wellness decisions.</p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
@@ -194,9 +194,9 @@ const Index = () => (
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Why Us</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">Why Choose MatrixMedSupport</h2>
-          <p className="mt-3 text-muted-foreground">Trusted by patients who value quality, privacy, and convenience.</p>
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Why People Choose Us</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A Calmer Way to Care for Your Wellbeing</h2>
+          <p className="mt-3 text-muted-foreground">Honest, educational, people-first — without the pressure.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feat, i) => (
@@ -225,16 +225,16 @@ const Index = () => (
 
       <div className="container relative z-10 text-center space-y-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">Ready to Take Control of Your Health?</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold">Ready for Clearer Wellness Answers?</h2>
         </motion.div>
         <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="text-lg text-primary-foreground/80 max-w-xl mx-auto">
-          Start your confidential consultation today. Secure, private, and expert-backed.
+          Book a free, private wellness conversation. No pressure — just thoughtful, educational guidance.
         </motion.p>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="flex flex-wrap justify-center gap-3">
           {[
-            { icon: Shield, label: "Privacy Assured" },
-            { icon: Lock, label: "Secure Platform" },
-            { icon: CheckCircle, label: "24/7 Support" },
+            { icon: Shield, label: "100% Private" },
+            { icon: Lock, label: "Secure & Confidential" },
+            { icon: CheckCircle, label: "Free First Conversation" },
           ].map((badge) => (
             <div key={badge.label} className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur px-4 py-2 rounded-full text-sm">
               <badge.icon size={16} /> {badge.label}
@@ -244,7 +244,7 @@ const Index = () => (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
           <Button asChild size="lg" variant="secondary" className="text-base px-10 shadow-xl hover:shadow-2xl transition-all">
             <Link to="/consultation">
-              Start Your Consultation <ArrowRight className="ml-2" size={18} />
+              Book a Free Conversation <ArrowRight className="ml-2" size={18} />
             </Link>
           </Button>
         </motion.div>
