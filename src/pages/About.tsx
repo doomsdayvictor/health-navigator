@@ -1,8 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, Award, Globe, ShieldCheck, Users, Sparkles } from "lucide-react";
+import {
+  Target, Eye, Heart, Award, Globe, ShieldCheck, Users, Sparkles,
+  BookOpen, PhoneCall, MessageCircle, GraduationCap, Lightbulb, Stethoscope,
+  ClipboardList, HeartHandshake, Lock, Headphones, CheckCircle2, Quote,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import CallButton from "@/components/CallButton";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
