@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import {
   Shield, Users, Zap, Heart, Stethoscope, Brain, Moon, Activity, Droplets,
   ArrowRight, CheckCircle, Star, Clock, Lock, Sparkles,
+  BookOpen, PhoneCall, MessageCircle, GraduationCap, ShieldCheck,
+  HeartHandshake, Lightbulb, ClipboardList, Quote,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -53,6 +55,28 @@ const stats = [
   { value: "100%", label: "Privacy Protected", icon: Lock },
 ];
 
+const learningTopics = [
+  { icon: Stethoscope, title: "Understanding Conditions", text: "Learn how common health conditions develop, in simple everyday language." },
+  { icon: BookOpen, title: "Treatment Categories", text: "Understand the broad categories of wellness approaches available today." },
+  { icon: Lightbulb, title: "Lifestyle Factors", text: "Discover diet, sleep, and movement choices that shape long-term wellbeing." },
+  { icon: ClipboardList, title: "What to Ask a Provider", text: "Walk into your next appointment prepared with the right questions." },
+  { icon: GraduationCap, title: "Health Literacy", text: "Build confidence in reading information and making informed wellness choices." },
+  { icon: HeartHandshake, title: "Emotional Support", text: "Talk through worries with someone who genuinely listens, without judgement." },
+];
+
+const principles = [
+  { icon: Lock, title: "Private", text: "Conversations stay confidential between you and our specialist." },
+  { icon: HeartHandshake, title: "Empathetic", text: "We listen first. You set the pace and the topics that matter." },
+  { icon: ShieldCheck, title: "Honest", text: "Educational only — we never pressure, prescribe, or sell medication." },
+  { icon: GraduationCap, title: "Expert-led", text: "Conversations led by specialists trained in health education." },
+];
+
+const testimonials = [
+  { name: "A. Mehta", text: "I finally understood what my diagnosis actually meant — and what to ask my doctor next." },
+  { name: "R. Kapoor", text: "The call was relaxed and informative. No pressure, just useful answers in plain words." },
+  { name: "S. Iyer", text: "It helped me feel less alone with my questions. A genuinely supportive conversation." },
+];
+
 const Index = () => (
   <Layout>
     {/* Hero */}
@@ -68,13 +92,21 @@ const Index = () => (
           animate="visible"
           className="max-w-3xl mx-auto text-center space-y-8"
         >
-          <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+          <motion.div variants={fadeUp} custom={0} className="flex justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl blur-xl pulse-glow" />
+              <div className="relative bg-card border border-border/50 rounded-2xl p-4 shadow-lg">
+                <img src="/logo.svg" alt="Brand logo" className="h-12 md:h-14 w-auto" />
+              </div>
+            </div>
+          </motion.div>
+          <motion.div variants={fadeUp} custom={1} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
             <Sparkles size={16} />
             Personalized Wellness Guidance
           </motion.div>
           <motion.h1
             variants={fadeUp}
-            custom={1}
+            custom={2}
             className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-foreground leading-tight"
           >
             Better Wellness Decisions,{" "}
@@ -84,12 +116,12 @@ const Index = () => (
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            custom={2}
+            custom={3}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
             Talk to a friendly wellness specialist for personalized, educational guidance — no pressure, just clarity.
           </motion.p>
-          <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-4">
+          <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="text-base px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
               <Link to="/consultation">
                 Book a Free Conversation <ArrowRight className="ml-2" size={18} />
@@ -165,6 +197,50 @@ const Index = () => (
       </div>
     </section>
 
+    {/* What we are / are not */}
+    <section className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute top-10 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl floating-element-slow" />
+      <div className="container relative z-10">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-sm font-medium text-secondary uppercase tracking-wider">Who We Are</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A wellness information service — nothing more, nothing less</h2>
+          <p className="mt-3 text-muted-foreground">We exist to help you understand health better through conversation. We are not a clinic, pharmacy, or prescriber.</p>
+        </motion.div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+            <Card className="h-full border-secondary/30 hover:shadow-lg transition-all">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+                  <CheckCircle size={22} />
+                </div>
+                <h3 className="font-heading font-semibold text-lg text-foreground">What we are</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A free educational helpline</li>
+                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A friendly listening ear</li>
+                  <li className="flex gap-2"><CheckCircle size={16} className="text-secondary shrink-0 mt-0.5" /> A guide to better questions for your provider</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1}>
+            <Card className="h-full border-primary/30 hover:shadow-lg transition-all">
+              <CardContent className="p-6 space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                  <ShieldCheck size={22} />
+                </div>
+                <h3 className="font-heading font-semibold text-lg text-foreground">What we are not</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a pharmacy or medication seller</li>
+                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a diagnosis or prescribing service</li>
+                  <li className="flex gap-2"><span className="text-primary mt-0.5">•</span> Not a replacement for a licensed provider</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
     {/* How It Works */}
     <section className="py-24 bg-gradient-to-b from-muted/40 to-background relative overflow-hidden">
       <div className="absolute -right-20 top-20 w-40 h-40 bg-secondary/10 rounded-full blur-2xl floating-element-slow" />
@@ -192,6 +268,37 @@ const Index = () => (
       </div>
     </section>
 
+    {/* What you can learn on a call */}
+    <section className="py-24 bg-muted/30 relative overflow-hidden">
+      <div className="absolute top-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl floating-element-slow" />
+      <div className="container relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+            <BookOpen size={16} /> What You Can Learn
+          </div>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+            Topics we cover on a <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">free call</span>
+          </h2>
+          <p className="text-muted-foreground">Bring any wellness question. We explain it simply, so you walk away more confident.</p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {learningTopics.map((t, i) => (
+            <motion.div key={t.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+              <Card className="h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-border/60">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-secondary/15 flex items-center justify-center text-primary">
+                    <t.icon size={24} />
+                  </div>
+                  <h3 className="text-lg font-heading font-semibold text-foreground">{t.title}</h3>
+                  <p className="text-sm text-muted-foreground">{t.text}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* Why Choose Us */}
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container relative z-10">
@@ -210,6 +317,59 @@ const Index = () => (
                   </div>
                   <h3 className="font-heading font-semibold text-foreground">{feat.title}</h3>
                   <p className="text-sm text-muted-foreground">{feat.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Principles */}
+    <section className="py-24 bg-gradient-to-b from-background to-primary/5 relative overflow-hidden">
+      <div className="container relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+            <ShieldCheck size={16} /> Our Principles
+          </div>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">How we approach every conversation</h2>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {principles.map((p, i) => (
+            <motion.div key={p.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+              <Card className="h-full text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-primary to-accent text-primary-foreground flex items-center justify-center">
+                    <p.icon size={26} />
+                  </div>
+                  <h3 className="text-lg font-heading font-semibold text-foreground">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground">{p.text}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Testimonials */}
+    <section className="py-24 bg-muted/30 relative overflow-hidden">
+      <div className="absolute bottom-10 left-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl floating-element" />
+      <div className="container relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+            <Users size={16} /> Reflections from Callers
+          </div>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Real conversations, real clarity</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+              <Card className="h-full hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6 space-y-4">
+                  <Quote className="text-primary/40" size={28} />
+                  <p className="text-muted-foreground italic">"{t.text}"</p>
+                  <p className="text-sm font-semibold text-foreground">— {t.name}</p>
                 </CardContent>
               </Card>
             </motion.div>
