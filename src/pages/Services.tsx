@@ -114,7 +114,7 @@ const Services = () => (
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl blur-xl pulse-glow" />
               <div className="relative bg-card border border-border/50 rounded-2xl p-4 shadow-lg">
-                <img src="/logo.svg" alt="Brand logo" className="h-12 md:h-14 w-auto" />
+                <img src="/logo.png" alt="Brand logo" className="h-12 md:h-14 w-auto" />
               </div>
             </div>
           </motion.div>
@@ -299,7 +299,7 @@ const Services = () => (
           <CardContent className="relative p-10 md:p-14 text-center space-y-6">
             <div className="flex justify-center">
               <div className="bg-white/10 backdrop-blur rounded-2xl p-3 border border-white/20">
-                <img src="/logo.svg" alt="Brand logo" className="h-10 w-auto brightness-0 invert" />
+                <img src="/logo.png" alt="Brand logo" className="h-10 w-auto brightness-0 invert" />
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold">

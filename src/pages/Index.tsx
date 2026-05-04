@@ -98,7 +98,7 @@ const Index = () => (
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl blur-xl pulse-glow" />
               <div className="relative bg-card border border-border/50 rounded-2xl p-4 shadow-lg">
-                <img src="/logo.svg" alt="Brand logo" className="h-12 md:h-14 w-auto" />
+                <img src="/logo.png" alt="Brand logo" className="h-12 md:h-14 w-auto" />
               </div>
             </div>
           </motion.div>

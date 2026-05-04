@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-card/90 backdrop-blur-xl supports-[backdrop-filter]:bg-card/70">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="MetrixConvo" className="h-10 w-auto max-w-[200px] object-contain" />
+          <img src="/logo.png" alt="MetrixConvo" className="h-10 w-auto max-w-[200px] object-contain" />
         </Link>
 
         {/* Desktop Nav */}

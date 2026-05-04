@@ -9,7 +9,7 @@ const Footer = () => (
         {/* Brand */}
         <div className="space-y-4">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.svg" alt="MetrixConvo" className="h-10 w-auto max-w-[200px] object-contain brightness-0 invert" />
+            <img src="/logo.png" alt="MetrixConvo" className="h-10 w-auto max-w-[200px] object-contain brightness-0 invert" />
           </Link>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
             Smarter medical support, delivered with care. Access trusted solutions for your health needs.

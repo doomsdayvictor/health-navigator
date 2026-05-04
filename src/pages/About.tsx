@@ -28,7 +28,7 @@ const About = () => (
           <motion.div variants={fadeUp} custom={0} className="flex justify-center">
             <div className="relative inline-flex items-center justify-center p-6 rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 shadow-xl">
               <div className="absolute inset-0 rounded-3xl bg-secondary/10 blur-2xl pulse-glow" />
-              <img src="/logo.svg" alt="MetrixConvo — health education platform" className="relative h-16 md:h-20 w-auto" />
+              <img src="/logo.png" alt="MetrixConvo — health education platform" className="relative h-16 md:h-20 w-auto" />
             </div>
           </motion.div>
           <motion.div variants={fadeUp} custom={1} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -301,7 +301,7 @@ const About = () => (
             <div className="absolute -top-16 -right-16 w-64 h-64 bg-secondary/30 rounded-full blur-3xl" />
             <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-accent/30 rounded-full blur-3xl" />
             <CardContent className="relative p-10 md:p-14 text-center space-y-6">
-              <img src="/logo.svg" alt="MetrixConvo" className="h-12 w-auto mx-auto opacity-95 brightness-0 invert" />
+              <img src="/logo.png" alt="MetrixConvo" className="h-12 w-auto mx-auto opacity-95 brightness-0 invert" />
               <h2 className="text-3xl md:text-4xl font-heading font-extrabold">Have a question? Let's talk it through.</h2>
               <p className="text-primary-foreground/90 max-w-2xl mx-auto">
                 A free, no-obligation educational phone conversation about diseases, treatments, and the questions on your mind.
