@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getTreatmentBySlug } from "@/data/treatments";
+import CallButton from "@/components/CallButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -55,9 +56,12 @@ const TreatmentDetail = () => {
               <p className="text-muted-foreground">
                 Start a confidential consultation to explore your options with our specialists.
               </p>
-              <Button asChild size="lg">
-                <Link to="/consultation">Start Consultation</Link>
-              </Button>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button asChild size="lg">
+                  <Link to="/consultation">Book a Free Conversation</Link>
+                </Button>
+                <CallButton size="lg" />
+              </div>
             </div>
           </motion.div>
         </div>

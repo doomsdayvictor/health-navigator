@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
+import CallButton from "@/components/CallButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -94,6 +95,7 @@ const Index = () => (
                 Book a Free Conversation <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
+            <CallButton size="lg" className="text-base px-8" showNumber />
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
               <Link to="/services">How We Help</Link>
             </Button>
@@ -242,11 +244,14 @@ const Index = () => (
           ))}
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
-          <Button asChild size="lg" variant="secondary" className="text-base px-10 shadow-xl hover:shadow-2xl transition-all">
-            <Link to="/consultation">
-              Book a Free Conversation <ArrowRight className="ml-2" size={18} />
-            </Link>
-          </Button>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild size="lg" variant="secondary" className="text-base px-10 shadow-xl hover:shadow-2xl transition-all">
+              <Link to="/consultation">
+                Book a Free Conversation <ArrowRight className="ml-2" size={18} />
+              </Link>
+            </Button>
+            <CallButton size="lg" className="text-base px-8" showNumber />
+          </div>
         </motion.div>
       </div>
     </section>

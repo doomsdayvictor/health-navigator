@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Heart, ArrowUpRight } from "lucide-react";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
 
 const Footer = () => (
   <footer className="border-t border-border bg-gradient-to-b from-foreground to-foreground/95 text-primary-foreground">
@@ -70,7 +71,9 @@ const Footer = () => (
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} className="text-secondary/80" />
-              <span>Mon–Fri, 9AM–6PM EST</span>
+              <a href={`tel:${CONTACT_PHONE_TEL}`} className="hover:text-primary-foreground transition-colors">
+                {CONTACT_PHONE_DISPLAY}
+              </a>
             </li>
           </ul>
         </div>

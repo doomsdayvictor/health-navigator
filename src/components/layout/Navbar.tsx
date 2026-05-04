@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -42,6 +43,12 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
+          <Button asChild size="sm" variant="outline" className="border-secondary/40 text-secondary hover:bg-secondary/10 hover:text-secondary">
+            <a href={`tel:${CONTACT_PHONE_TEL}`} aria-label={`Call ${CONTACT_PHONE_DISPLAY}`}>
+              <Phone className="mr-1" size={14} />
+              {CONTACT_PHONE_DISPLAY}
+            </a>
+          </Button>
           <Button asChild size="sm" className="shadow-md shadow-primary/15 hover:shadow-lg hover:shadow-primary/20 transition-all">
             <Link to="/consultation">
               Book Consultation <ArrowRight className="ml-1" size={14} />
@@ -81,6 +88,11 @@ const Navbar = () => {
               <Link to="/consultation" onClick={() => setMobileOpen(false)}>
                 Book Consultation <ArrowRight className="ml-1" size={14} />
               </Link>
+            </Button>
+            <Button asChild variant="outline" size="sm" className="border-secondary/40 text-secondary">
+              <a href={`tel:${CONTACT_PHONE_TEL}`} onClick={() => setMobileOpen(false)}>
+                <Phone className="mr-1" size={14} /> {CONTACT_PHONE_DISPLAY}
+              </a>
             </Button>
           </nav>
         </div>
