@@ -53,7 +53,7 @@ const features = [
 const faqs = [
   {
     q: "What exactly is MetrixConvo?",
-    a: "MetrixConvo is a wellness and health information platform. We offer free, private conversations with wellness specialists who provide educational guidance — we are not a pharmacy and do not prescribe or sell medication.",
+    a: "MetrixConvo is a wellness and health information platform. We offer free, private conversations with wellness specialists who provide educational guidance. We are not a pharmacy and do not prescribe or sell medication.",
   },
   {
     q: "Is the first conversation really free?",
