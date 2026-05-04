@@ -145,14 +145,14 @@ const Index = () => (
         >
           {stats.map((stat, i) => (
             <motion.div key={stat.label} variants={fadeUp} custom={i}>
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur">
-                <CardContent className="p-5 flex items-center gap-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary">
+              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur h-full">
+                <CardContent className="p-4 sm:p-5 flex items-center gap-3 sm:gap-4">
+                  <div className="shrink-0 p-2.5 sm:p-3 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary">
                     <stat.icon size={22} />
                   </div>
-                  <div>
-                    <p className="text-2xl font-heading font-extrabold text-foreground">{stat.value}</p>
-                    <p className="text-xs text-muted-foreground">{stat.label}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xl sm:text-2xl font-heading font-extrabold text-foreground leading-tight">{stat.value}</p>
+                    <p className="text-xs text-muted-foreground leading-snug break-words">{stat.label}</p>
                   </div>
                 </CardContent>
               </Card>
