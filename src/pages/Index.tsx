@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
 import CallButton from "@/components/CallButton";
@@ -47,6 +48,33 @@ const features = [
   { icon: Users, title: "People-First Specialists", description: "Friendly wellness specialists who actually listen to your goals." },
   { icon: Zap, title: "Simple & Stress-Free", description: "A short conversation that respects your time — no jargon, no pressure." },
   { icon: Brain, title: "Educational, Always", description: "Clear, honest information so you can make confident wellness decisions." },
+];
+
+const faqs = [
+  {
+    q: "What exactly is MetrixConvo?",
+    a: "MetrixConvo is a wellness and health information platform. We offer free, private conversations with wellness specialists who provide educational guidance — we are not a pharmacy and do not prescribe or sell medication.",
+  },
+  {
+    q: "Is the first conversation really free?",
+    a: "Yes. Your first wellness conversation is completely free, with no obligation. It's simply a chance to talk through your wellness goals and explore your options.",
+  },
+  {
+    q: "Will my information stay private?",
+    a: "Absolutely. Your details are kept confidential and are never shared without your permission. We follow strict privacy practices outlined in our Privacy Policy.",
+  },
+  {
+    q: "Do you provide medical advice or prescriptions?",
+    a: "No. MetrixConvo provides educational wellness information only. For diagnosis, prescriptions, or medical treatment, we encourage you to speak with a qualified, licensed healthcare provider.",
+  },
+  {
+    q: "How long does a wellness conversation take?",
+    a: "Most conversations last around 10–15 minutes. Our specialists respect your time and focus on giving you clear, useful information.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Simply share a few details through our private form or give us a call. A wellness specialist will reach out to schedule a convenient time to chat.",
+  },
 ];
 
 const stats = [
