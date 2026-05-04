@@ -8,12 +8,12 @@ const Terms = () => (
         <p><strong>Last updated:</strong> May 1, 2026</p>
 
         <p>
-          These Terms of Service (“Terms”) govern your access to and use of matrixmedsupport.com and any related services we offer (collectively, the “Services”). By accessing or using the Services you agree to be bound by these Terms. If you do not agree, please do not use the Services.
+          These Terms of Service (“Terms”) govern your access to and use of metrixconvo.com and any related services we offer (collectively, the “Services”). By accessing or using the Services you agree to be bound by these Terms. If you do not agree, please do not use the Services.
         </p>
 
         <h2>1. Who We Are</h2>
         <p>
-          MatrixMedSupport is a <strong>wellness &amp; health information platform</strong>. We are not a pharmacy, prescriber, telehealth provider, or licensed medical practice. We do not sell, dispense, ship, or facilitate the purchase of any medication, prescription product, controlled substance, hormone therapy, antibiotic, or injectable.
+          MetrixConvo is a <strong>wellness &amp; health information platform</strong>. We are not a pharmacy, prescriber, telehealth provider, or licensed medical practice. We do not sell, dispense, ship, or facilitate the purchase of any medication, prescription product, controlled substance, hormone therapy, antibiotic, or injectable.
         </p>
 
         <h2>2. Eligibility</h2>
@@ -30,7 +30,7 @@ const Terms = () => (
 
         <h2>4. No Doctor–Patient Relationship</h2>
         <p>
-          Use of the Services does <strong>not</strong> create a doctor–patient, clinician–patient, pharmacist–patient, or any other regulated healthcare relationship between you and MatrixMedSupport. For diagnosis, prescriptions, or treatment, you must consult a licensed healthcare professional.
+          Use of the Services does <strong>not</strong> create a doctor–patient, clinician–patient, pharmacist–patient, or any other regulated healthcare relationship between you and MetrixConvo. For diagnosis, prescriptions, or treatment, you must consult a licensed healthcare professional.
         </p>
 
         <h2>5. User Responsibilities</h2>
@@ -44,7 +44,7 @@ const Terms = () => (
 
         <h2>6. Intellectual Property</h2>
         <p>
-          All content on the Services — including text, graphics, logos, images, audio, video, and software — is owned by or licensed to MatrixMedSupport and is protected by copyright, trademark, and other intellectual-property laws. You may view and share our content for personal, non-commercial purposes with attribution. You may not copy, modify, distribute, or create derivative works for commercial use without our prior written consent.
+          All content on the Services — including text, graphics, logos, images, audio, video, and software — is owned by or licensed to MetrixConvo and is protected by copyright, trademark, and other intellectual-property laws. You may view and share our content for personal, non-commercial purposes with attribution. You may not copy, modify, distribute, or create derivative works for commercial use without our prior written consent.
         </p>
 
         <h2>7. User Submissions</h2>
@@ -69,12 +69,12 @@ const Terms = () => (
 
         <h2>11. Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by law, MatrixMedSupport, its affiliates, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or any loss of profits, revenue, data, or goodwill, arising out of or related to your use of the Services. Our aggregate liability for any claim arising from these Terms or the Services shall not exceed one hundred U.S. dollars (US$100).
+          To the maximum extent permitted by law, MetrixConvo, its affiliates, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or any loss of profits, revenue, data, or goodwill, arising out of or related to your use of the Services. Our aggregate liability for any claim arising from these Terms or the Services shall not exceed one hundred U.S. dollars (US$100).
         </p>
 
         <h2>12. Indemnification</h2>
         <p>
-          You agree to indemnify and hold harmless MatrixMedSupport and its representatives from any claim, loss, liability, or expense (including reasonable attorneys’ fees) arising out of your breach of these Terms, misuse of the Services, or violation of any law or third-party right.
+          You agree to indemnify and hold harmless MetrixConvo and its representatives from any claim, loss, liability, or expense (including reasonable attorneys’ fees) arising out of your breach of these Terms, misuse of the Services, or violation of any law or third-party right.
         </p>
 
         <h2>13. Termination</h2>
@@ -89,12 +89,12 @@ const Terms = () => (
 
         <h2>15. Governing Law &amp; Disputes</h2>
         <p>
-          These Terms are governed by the laws of the jurisdiction in which MatrixMedSupport operates, without regard to conflict-of-law principles. Any dispute will be resolved in the competent courts of that jurisdiction, unless mandatory local consumer law provides otherwise.
+          These Terms are governed by the laws of the jurisdiction in which MetrixConvo operates, without regard to conflict-of-law principles. Any dispute will be resolved in the competent courts of that jurisdiction, unless mandatory local consumer law provides otherwise.
         </p>
 
         <h2>16. Contact</h2>
         <p>
-          Questions about these Terms? Email <a href="mailto:support@matrixmedsupport.com">support@matrixmedsupport.com</a>.
+          Questions about these Terms? Email <a href="mailto:support@metrixconvo.com">support@metrixconvo.com</a>.
         </p>
       </div>
     </section>

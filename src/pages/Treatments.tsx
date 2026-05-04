@@ -78,7 +78,7 @@ const Treatments = () => (
           <motion.div variants={fadeUp} custom={0} className="flex justify-center">
             <div className="relative inline-flex items-center justify-center p-6 rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 shadow-xl">
               <div className="absolute inset-0 rounded-3xl bg-secondary/10 blur-2xl pulse-glow" />
-              <img src="/logo.svg" alt="Wellness education platform" className="relative h-16 md:h-20 w-auto" />
+              <img src="/logo.png" alt="Wellness education platform" className="relative h-16 md:h-20 w-auto" />
             </div>
           </motion.div>
           <motion.div variants={fadeUp} custom={1} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -307,7 +307,7 @@ const Treatments = () => (
           <CardContent className="relative p-10 md:p-14 text-center space-y-6">
             <div className="flex justify-center">
               <div className="bg-white/10 backdrop-blur rounded-2xl p-3 border border-white/20">
-                <img src="/logo.svg" alt="Brand logo" className="h-10 w-auto brightness-0 invert" />
+                <img src="/logo.png" alt="Brand logo" className="h-10 w-auto brightness-0 invert" />
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold">

@@ -10,13 +10,13 @@ const AdvertisingDisclosure = () => (
         <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 not-prose mb-8">
           <p className="font-heading font-bold text-foreground text-lg mb-2">Transparency Notice</p>
           <p className="text-muted-foreground">
-            MatrixMedSupport is a wellness &amp; health information platform. We are <strong>not a pharmacy, prescriber, or licensed medical provider</strong>. This page explains how we advertise, how our content is funded, and how we comply with the advertising policies of platforms such as Google Ads and Meta (Facebook &amp; Instagram).
+            MetrixConvo is a wellness &amp; health information platform. We are <strong>not a pharmacy, prescriber, or licensed medical provider</strong>. This page explains how we advertise, how our content is funded, and how we comply with the advertising policies of platforms such as Google Ads and Meta (Facebook &amp; Instagram).
           </p>
         </div>
 
         <h2>1. Who We Are</h2>
         <p>
-          MatrixMedSupport (“we”, “us”, “our”) operates an educational wellness website at matrixmedsupport.com. Our purpose is to help adults better understand general wellness topics and to connect them with qualified, licensed healthcare professionals when appropriate. We do not sell, supply, ship, or facilitate the purchase of any prescription medication, controlled substance, hormone therapy, antibiotic, injectable, or other regulated pharmaceutical product.
+          MetrixConvo (“we”, “us”, “our”) operates an educational wellness website at metrixconvo.com. Our purpose is to help adults better understand general wellness topics and to connect them with qualified, licensed healthcare professionals when appropriate. We do not sell, supply, ship, or facilitate the purchase of any prescription medication, controlled substance, hormone therapy, antibiotic, injectable, or other regulated pharmaceutical product.
         </p>
 
         <h2>2. Nature of Our Advertising</h2>
@@ -80,7 +80,7 @@ const AdvertisingDisclosure = () => (
 
         <h2>9. Reporting an Ad Concern</h2>
         <p>
-          If you believe an advertisement attributed to MatrixMedSupport violates this disclosure or any applicable advertising policy, please contact us at <a href="mailto:support@matrixmedsupport.com">support@matrixmedsupport.com</a> with the ad’s URL, screenshot, and the platform on which it appeared. We investigate every report and will take down or amend non-compliant creative promptly.
+          If you believe an advertisement attributed to MetrixConvo violates this disclosure or any applicable advertising policy, please contact us at <a href="mailto:support@metrixconvo.com">support@metrixconvo.com</a> with the ad’s URL, screenshot, and the platform on which it appeared. We investigate every report and will take down or amend non-compliant creative promptly.
         </p>
 
         <h2>10. Updates to This Disclosure</h2>
@@ -90,11 +90,11 @@ const AdvertisingDisclosure = () => (
 
         <h2>11. Contact</h2>
         <p>
-          Questions about our advertising practices? Email <a href="mailto:support@matrixmedsupport.com">support@matrixmedsupport.com</a>.
+          Questions about our advertising practices? Email <a href="mailto:support@metrixconvo.com">support@metrixconvo.com</a>.
         </p>
 
         <p className="text-xs mt-10">
-          Educational information only. MatrixMedSupport is not a pharmacy, prescriber, or licensed medical provider and does not diagnose, treat, or supply medication. Always consult a qualified healthcare professional.
+          Educational information only. MetrixConvo is not a pharmacy, prescriber, or licensed medical provider and does not diagnose, treat, or supply medication. Always consult a qualified healthcare professional.
         </p>
       </div>
     </section>

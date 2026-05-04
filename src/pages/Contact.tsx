@@ -33,7 +33,7 @@ const Contact = () => (
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 gap-4">
               {[
-                { icon: Mail, label: "Email", value: "support@matrixmedsupport.com", href: "mailto:support@matrixmedsupport.com", color: "from-primary/10 to-accent/10 text-primary" },
+                { icon: Mail, label: "Email", value: "support@metrixconvo.com", href: "mailto:support@metrixconvo.com", color: "from-primary/10 to-accent/10 text-primary" },
                 { icon: Phone, label: "Phone", value: CONTACT_PHONE_DISPLAY, href: `tel:${CONTACT_PHONE_TEL}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
                 { icon: Phone, label: "Alternate Phone", value: CONTACT_PHONE_DISPLAY_2, href: `tel:${CONTACT_PHONE_TEL_2}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
                 { icon: Clock, label: "Support Hours", value: "Mon–Fri, 9AM–6PM EST", href: null, color: "from-accent/10 to-primary/10 text-accent" },
