@@ -160,10 +160,10 @@ const Treatments = () => (
                   <h3 className="font-heading font-semibold text-xl">What we do</h3>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Free verbal education across wellness topics</li>
-                  <li>• Plain-language explanations of conditions</li>
-                  <li>• Help preparing better questions for your doctor</li>
-                  <li>• A private, judgement-free conversation</li>
+                  <li>\u2022 Free, friendly chats across wellness topics</li>
+                  <li>\u2022 Conditions explained in plain English</li>
+                  <li>\u2022 Help shaping smarter questions for your doctor</li>
+                  <li>\u2022 A private chat, zero judgement</li>
                 </ul>
               </CardContent>
             </Card>
@@ -175,13 +175,13 @@ const Treatments = () => (
                   <div className="w-11 h-11 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
                     <ShieldCheck size={22} />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl">What we are not</h3>
+                  <h3 className="font-heading font-semibold text-xl">What we're not</h3>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Not a pharmacy or medication seller</li>
-                  <li>• Not a clinic — we do not diagnose</li>
-                  <li>• Not a prescriber — we do not issue prescriptions</li>
-                  <li>• Not a replacement for your licensed provider</li>
+                  <li>\u2022 Not a pharmacy and not selling medication</li>
+                  <li>\u2022 Not a clinic \u2014 we don't diagnose anything</li>
+                  <li>\u2022 Not a prescriber \u2014 no scripts here</li>
+                  <li>\u2022 Not a stand-in for your own doctor</li>
                 </ul>
               </CardContent>
             </Card>
