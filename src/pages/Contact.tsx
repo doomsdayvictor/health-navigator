@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Clock, Send, MapPin, Sparkles } from "lucide-react";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
 import { useToast } from "@/hooks/use-toast";
 
 const fadeUp = {
@@ -49,7 +50,7 @@ const Contact = () => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4">
               {[
                 { icon: Mail, label: "Email", value: "support@matrixmedsupport.com", href: "mailto:support@matrixmedsupport.com", color: "from-primary/10 to-accent/10 text-primary" },
-                { icon: Phone, label: "Phone", value: "Contact via form", href: null, color: "from-secondary/10 to-secondary/5 text-secondary" },
+                { icon: Phone, label: "Phone", value: CONTACT_PHONE_DISPLAY, href: `tel:${CONTACT_PHONE_TEL}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
                 { icon: Clock, label: "Support Hours", value: "Mon–Fri, 9AM–6PM EST", href: null, color: "from-accent/10 to-primary/10 text-accent" },
                 { icon: MapPin, label: "Location", value: "Supporting patients globally", href: null, color: "from-primary/10 to-secondary/10 text-primary" },
               ].map((item, i) => (
