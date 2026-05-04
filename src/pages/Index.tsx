@@ -122,12 +122,7 @@ const Index = () => (
             Talk to a friendly wellness specialist for personalized, educational guidance. No pressure, just clarity.
           </motion.p>
           <motion.div variants={fadeUp} custom={4} className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="text-base px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
-              <Link to="/consultation">
-                Book a Free Conversation <ArrowRight className="ml-2" size={18} />
-              </Link>
-            </Button>
-            <CallButton size="lg" className="text-base px-8" label="Call Now" fullLabel={false} />
+            <CallButton size="lg" className="text-base px-8" showNumber />
             <Button asChild variant="outline" size="lg" className="text-base px-8 border-primary/30 hover:bg-primary/5">
               <Link to="/services">How We Help</Link>
             </Button>
@@ -405,11 +400,6 @@ const Index = () => (
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={3}>
           <div className="flex flex-wrap justify-center gap-3">
-            <Button asChild size="lg" variant="secondary" className="text-base px-10 shadow-xl hover:shadow-2xl transition-all">
-              <Link to="/consultation">
-                Book a Free Conversation <ArrowRight className="ml-2" size={18} />
-              </Link>
-            </Button>
             <CallButton size="lg" className="text-base px-8" showNumber />
           </div>
         </motion.div>

@@ -1,41 +1,23 @@
-import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import FloatingIcons from "@/components/FloatingIcons";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, Clock, Send, MapPin, Sparkles } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Sparkles } from "lucide-react";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, CONTACT_PHONE_DISPLAY_2, CONTACT_PHONE_TEL_2 } from "@/lib/contact";
-import { useToast } from "@/hooks/use-toast";
+import CallButton from "@/components/CallButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
-const Contact = () => {
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    toast({ title: "Message sent!", description: "We'll get back to you as soon as possible." });
-    (e.target as HTMLFormElement).reset();
-  };
-
-  return (
+const Contact = () => (
     <Layout>
       <section className="relative py-24 bg-gradient-to-b from-primary/8 to-background overflow-hidden">
         <FloatingIcons count={6} />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
 
-        <div className="container max-w-5xl relative z-10">
+        <div className="container max-w-4xl relative z-10">
           <motion.div initial="hidden" animate="visible" className="text-center space-y-4 mb-14">
             <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
               <Sparkles size={16} /> Get In Touch
@@ -43,11 +25,13 @@ const Contact = () => {
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-heading font-extrabold text-foreground">
               Contact <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Us</span>
             </motion.h1>
-            <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground">We're here to help. Reach out anytime.</motion.p>
+            <motion.p variants={fadeUp} custom={2} className="text-lg text-muted-foreground">We're here to help. Give us a call anytime.</motion.p>
+            <motion.div variants={fadeUp} custom={3} className="flex flex-wrap justify-center gap-3 pt-2">
+              <CallButton size="lg" showNumber />
+            </motion.div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 gap-4">
               {[
                 { icon: Mail, label: "Email", value: "support@matrixmedsupport.com", href: "mailto:support@matrixmedsupport.com", color: "from-primary/10 to-accent/10 text-primary" },
                 { icon: Phone, label: "Phone", value: CONTACT_PHONE_DISPLAY, href: `tel:${CONTACT_PHONE_TEL}`, color: "from-secondary/10 to-secondary/5 text-secondary" },
@@ -73,42 +57,10 @@ const Contact = () => {
                   </Card>
                 </motion.div>
               ))}
-            </motion.div>
-
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="lg:col-span-2">
-              <Card className="shadow-xl border-primary/10">
-                <CardContent className="p-6 md:p-8">
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="c-name">Name *</Label>
-                        <Input id="c-name" placeholder="Your name" required className="border-border/60 focus:border-primary" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="c-email">Email *</Label>
-                        <Input id="c-email" type="email" placeholder="your@email.com" required className="border-border/60 focus:border-primary" />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="c-subject">Subject</Label>
-                      <Input id="c-subject" placeholder="How can we help?" className="border-border/60 focus:border-primary" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="c-message">Message *</Label>
-                      <Textarea id="c-message" placeholder="Your message..." rows={5} required className="border-border/60 focus:border-primary" />
-                    </div>
-                    <Button type="submit" className="w-full shadow-lg shadow-primary/20" disabled={loading}>
-                      {loading ? "Sending..." : <><Send size={16} className="mr-2" /> Send Message</>}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>
-  );
-};
+);
 
 export default Contact;
