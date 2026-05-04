@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ArrowRight, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
 
@@ -49,11 +49,6 @@ const Navbar = () => {
               {CONTACT_PHONE_DISPLAY}
             </a>
           </Button>
-          <Button asChild size="sm" className="shadow-md shadow-primary/15 hover:shadow-lg hover:shadow-primary/20 transition-all">
-            <Link to="/consultation">
-              Book Consultation <ArrowRight className="ml-1" size={14} />
-            </Link>
-          </Button>
         </div>
 
         {/* Mobile toggle */}
@@ -84,12 +79,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="mt-3 shadow-md shadow-primary/15" size="sm">
-              <Link to="/consultation" onClick={() => setMobileOpen(false)}>
-                Book Consultation <ArrowRight className="ml-1" size={14} />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="sm" className="border-secondary/40 text-secondary">
+            <Button asChild variant="outline" size="sm" className="mt-3 border-secondary/40 text-secondary">
               <a href={`tel:${CONTACT_PHONE_TEL}`} onClick={() => setMobileOpen(false)}>
                 <Phone className="mr-1" size={14} /> {CONTACT_PHONE_DISPLAY}
               </a>
