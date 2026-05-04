@@ -9,7 +9,6 @@ import Services from "./pages/Services";
 import Treatments from "./pages/Treatments";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import HowItWorks from "./pages/HowItWorks";
-import Consultation from "./pages/Consultation";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
@@ -33,7 +32,6 @@ const App = () => (
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/treatments/:slug" element={<TreatmentDetail />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/consultation" element={<Consultation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
