@@ -211,7 +211,7 @@ const Index = () => (
             <Card className="h-full border-secondary/30 hover:shadow-lg transition-all">
               <CardContent className="p-6 space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
-                  <CheckCircle2Icon />
+                  <CheckCircle size={22} />
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-foreground">What we are</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
