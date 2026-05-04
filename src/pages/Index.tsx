@@ -203,7 +203,7 @@ const Index = () => (
       <div className="container relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-sm font-medium text-secondary uppercase tracking-wider">Who We Are</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A wellness information service — nothing more, nothing less</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">A Wellness Information Service Nothing More, Nothing Less</h2>
           <p className="mt-3 text-muted-foreground">We exist to help you understand health better through conversation. We are not a clinic, pharmacy, or prescriber.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
