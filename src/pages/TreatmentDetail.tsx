@@ -54,13 +54,10 @@ const TreatmentDetail = () => {
             <div className="bg-muted rounded-xl p-8 text-center space-y-4">
               <h3 className="text-xl font-heading font-bold text-foreground">Interested in {treatment.title}?</h3>
               <p className="text-muted-foreground">
-                Start a confidential consultation to explore your options with our specialists.
+                Call us for a free, confidential wellness conversation to explore your options.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Button asChild size="lg">
-                  <Link to="/consultation">Book a Free Conversation</Link>
-                </Button>
-                <CallButton size="lg" />
+                <CallButton size="lg" showNumber />
               </div>
             </div>
           </motion.div>
