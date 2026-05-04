@@ -95,9 +95,9 @@ const principles = [
 ];
 
 const testimonials = [
-  { name: "A. Mehta", text: "I finally understood what my diagnosis actually meant — and what to ask my doctor next." },
-  { name: "R. Kapoor", text: "The call was relaxed and informative. No pressure, just useful answers in plain words." },
-  { name: "S. Iyer", text: "It helped me feel less alone with my questions. A genuinely supportive conversation." },
+  { name: "Michael Carter", text: "I finally understood what my diagnosis actually meant — and what to ask my doctor next." },
+  { name: "Jessica Bennett", text: "The call was relaxed and informative. No pressure, just useful answers in plain words." },
+  { name: "David Thompson", text: "It helped me feel less alone with my questions. A genuinely supportive conversation." },
 ];
 
 const Services = () => (
